@@ -1,16 +1,23 @@
 footer{
 background-color: #7CB98E;
 }
-.footerComponent{
-
-}
 .footerComponent h3{
     font-size: 22px;
 }
 
+@media (max-width: 520px) {
+    .footerComponent h3 {
+        font-size: 10px; 
+    }
+}
 @media (max-width: 768px) {
     .footerComponent h3 {
-        font-size: 14px; /* الحجم الصغير للشاشات الصغيرة */
+        font-size: 14px; 
+    }
+}
+@media (max-width: 850px) {
+    .footerComponent h3 {
+        font-size: 20px; 
     }
 }
 
@@ -18,6 +25,8 @@ background-color: #7CB98E;
     color: #157A67;
 }
 ul li{
+    font-size: 20px;
+    margin-bottom: 5px;
     color: #FDFDFD;
     cursor: pointer;
 };
