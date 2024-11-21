@@ -2,6 +2,11 @@ import './App.css'
 import Footer from './Components/Footer/Footer'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
+import EgazatPage from './Pages/EgazatPage';
+import EgazatDetailsPage from './Pages/EgazatDetailsPage';
+import Header from "./Components/Header/Header"
+
+
 
 
 function App() {
@@ -14,7 +19,7 @@ function App() {
             <Routes>
             <Route path='/'  element={<Home/>}/>
             <Route path='/egazatpage'  element={<EgazatPage/>}/>
-            <Route path="/details/:card/:narration" element={<EgazatDetailsPage />} />
+            <Route path="/details/:card/:narration" element={<EgazatDetailsPage/>} />
             </Routes>
           <Footer/>
           </Router> 
