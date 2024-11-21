@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="app">
         <div className="appContainer">
-          <h1>  قران  كريم</h1>
+          <h1 className="text-4xl font-bold text-blue-500">  قران  كريم</h1>
           {/* <Router>
             <Routes>
               <Route  path="/"  element={<Home/>}/>

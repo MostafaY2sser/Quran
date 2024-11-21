@@ -45,3 +45,9 @@ a{
   max-width: 1440px;
   margin: 0 auto ;
 }
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
