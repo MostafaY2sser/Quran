@@ -227,22 +227,7 @@ const cardsData = [
     ],
   },
   // أضف باقي البيانات للكروت...
-  {
-    title: 'قراءة أبي عمرو البصري',
-    buttons: [
-      {
-        name: 'رواية الدوري',
-        image: '/images/douri.png',
-        description: 'رواية الدوري عن أبي عمرو من القراءات المتداولة.',
-      },
-      {
-        name: 'رواية السوسي',
-        image: '/images/sousi.png',
-        description: 'رواية السوسي عن أبي عمرو معروفة بجمال الأداء.',
-      },
-    ],
-  },
-  // أضف باقي البيانات للكروت...
+  
 ];
 
 export default function EgazatPage() {
