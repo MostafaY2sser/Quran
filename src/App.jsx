@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './Components/Footer/Footer'
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -20,6 +21,7 @@ function App() {
               </Route>
             </Routes>
           </Router> */}
+          <Footer/>
         </div>
     </div>
   )
