@@ -1,5 +1,5 @@
-.footer{
-
+footer{
+background-color: #7CB98E;
 }
 .footerComponent{
 
@@ -8,12 +8,19 @@
     font-size: 22px;
 }
 
+@media (max-width: 768px) {
+    .footerComponent h3 {
+        font-size: 14px; /* الحجم الصغير للشاشات الصغيرة */
+    }
+}
+
 .socia-icone{
     color: #157A67;
 }
-
-
-
+ul li{
+    color: #FDFDFD;
+    cursor: pointer;
+};
 
 
 
