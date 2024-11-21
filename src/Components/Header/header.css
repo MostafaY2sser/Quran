@@ -1,0 +1,25 @@
+.headers img{
+    cursor: pointer;
+}
+.headers .logo img{
+    width: 150px;
+}
+.headers .links{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
+.headers .links .active{
+    color: var(--main-color);
+    position: relative;
+}
+.headers .links .active::before{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-border-color);
+    border-radius: 50%;
+}
