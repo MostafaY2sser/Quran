@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home';
 import EgazatPage from './Pages/EgazatPage';
 import EgazatDetailsPage from './Pages/EgazatDetailsPage';
 import Header from "./Components/Header/Header"
+import QuranCourses from './Pages/QuranCourses';
 
 
 
@@ -13,17 +14,18 @@ function App() {
 
   return (
     <div className="app">
-        <div className="appContainer">
-          <Router>
-            <Header/>
-            <Routes>
-            <Route path='/'  element={<Home/>}/>
-            <Route path='/egazatpage'  element={<EgazatPage/>}/>
-            <Route path="/details/:card/:narration" element={<EgazatDetailsPage/>} />
-            </Routes>
-          <Footer/>
-          </Router> 
-        </div>
+      <div className="appContainer">
+        <Router>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/egazatpage' element={<EgazatPage />} />
+            <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
+            <Route path="/qurancourse" element={<QuranCourses/>} />
+          </Routes>
+          <Footer />
+        </Router>
+      </div>
     </div>
   )
 }

@@ -1,88 +1,10 @@
-// import { useNavigate } from 'react-router-dom';
-// import React from 'react';
-
-
-// const cardsData = [
-//   {
-//     title: 'قراءة نافع',
-//     buttons: ['رواية قالون', 'رواية ورش'],
-//   },
-//   {
-//     title: 'قراءة ابن كثير',
-//     buttons: ['رواية البزي', 'رواية قنبل'],
-//   },
-//   {
-//     title: 'قراءة أبي عمرو البصري',
-//     buttons: ['رواية الدوري', 'رواية السوسي'],
-//   },
-//   {
-//     title: 'قراءة عاصم',
-//     buttons: ['رواية شعبة', 'رواية حفص'],
-//   },
-//   {
-//     title: 'قراءة ابن عامر',
-//     buttons: ['رواية هشام', 'رواية ابن ذكوان'],
-//   },
-//   {
-//     title: 'قراءة الكسائي',
-//     buttons: ['رواية الدوري', 'رواية أبي الحارث'],
-//   },
-//   {
-//     title: 'قراءة خلف',
-//     buttons: ['رواية إسحاق', 'رواية إدريس'],
-//   },
-//   {
-//     title: 'قراءة يعقوب',
-//     buttons: ['رواية روح', 'رواية إدريس'],
-//   },
-//   {
-//     title: 'قراءة ابن مجاهد',
-//     buttons: ['رواية ابن وردان', 'رواية ابن جماز'],
-//   },
-// ];
-
-// export default function EgazatPage() {
-//   const navigate = useNavigate();
-
-//   const handleNavigate = (card, narration) => {
-//     navigate(`/details/${card}/${narration}`);
-//   };
-//   return (
-//     <>
-//       <div className="min-h-screen bg-gray-100 p-8">
-//         <h1 className="text-2xl font-bold text-center mb-6 text-green-700">
-//           اختر القراءة والرواية
-//         </h1>
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-//           {cardsData.map((card, index) => (
-//             <div
-//               key={index}
-//               className="p-4 bg-green-100 rounded-lg shadow-lg border border-green-200"
-//             >
-//               <h3 className="mb-4 text-lg font-bold text-green-800 text-center">
-//                 {card.title}
-//               </h3>
-//               {card.buttons.map((button, idx) => (
-//                 <button
-//                   key={idx}
-//                   className="globalButton"
-//                   onClick={() => handleNavigate(card.title, button)}
-//                 >
-//                   {button}
-//                 </button>
-//               ))}
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react'; // إضافة useState هنا
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import FoundEgaza from "../assets/images/general/FoundEgaza.png"
+import design1 from "../assets/images/general/design1.png"
+import design2 from "../assets/images/general/design2.png"
 
 const cardsData = [
   {
@@ -132,15 +54,15 @@ const cardsData = [
   },
   // أضف باقي البيانات للكروت...
   {
-    title: 'قراءة أبي عمرو البصري',
+    title: 'قراءة ابن عامر',
     buttons: [
       {
-        name: 'رواية الدوري',
+        name: 'رواية هشام',
         image: '/images/douri.png',
         description: 'رواية الدوري عن أبي عمرو من القراءات المتداولة.',
       },
       {
-        name: 'رواية السوسي',
+        name: 'رواية ابن ذكوان',
         image: '/images/sousi.png',
         description: 'رواية السوسي عن أبي عمرو معروفة بجمال الأداء.',
       },
@@ -148,15 +70,15 @@ const cardsData = [
   },
   // أضف باقي البيانات للكروت...
   {
-    title: 'قراءة أبي عمرو البصري',
+    title: 'قراءة عاصم',
     buttons: [
       {
-        name: 'رواية الدوري',
+        name: 'رواية حفص',
         image: '/images/douri.png',
         description: 'رواية الدوري عن أبي عمرو من القراءات المتداولة.',
       },
       {
-        name: 'رواية السوسي',
+        name: 'رواية شعبة',
         image: '/images/sousi.png',
         description: 'رواية السوسي عن أبي عمرو معروفة بجمال الأداء.',
       },
@@ -164,15 +86,15 @@ const cardsData = [
   },
   // أضف باقي البيانات للكروت...
   {
-    title: 'قراءة أبي عمرو البصري',
+    title: 'قراءة حمزة',
     buttons: [
       {
-        name: 'رواية الدوري',
+        name: 'رواية خلف',
         image: '/images/douri.png',
         description: 'رواية الدوري عن أبي عمرو من القراءات المتداولة.',
       },
       {
-        name: 'رواية السوسي',
+        name: 'رواية خلاد',
         image: '/images/sousi.png',
         description: 'رواية السوسي عن أبي عمرو معروفة بجمال الأداء.',
       },
@@ -180,7 +102,7 @@ const cardsData = [
   },
   // أضف باقي البيانات للكروت...
   {
-    title: 'قراءة أبي عمرو البصري',
+    title: 'قراءة الكسائي',
     buttons: [
       {
         name: 'رواية الدوري',
@@ -188,7 +110,7 @@ const cardsData = [
         description: 'رواية الدوري عن أبي عمرو من القراءات المتداولة.',
       },
       {
-        name: 'رواية السوسي',
+        name: 'رواية ابو الحارث',
         image: '/images/sousi.png',
         description: 'رواية السوسي عن أبي عمرو معروفة بجمال الأداء.',
       },
@@ -196,15 +118,15 @@ const cardsData = [
   },
   // أضف باقي البيانات للكروت...
   {
-    title: 'قراءة أبي عمرو البصري',
+    title: 'قراءة يعقوب',
     buttons: [
       {
-        name: 'رواية الدوري',
+        name: "رواية رويس",
         image: '/images/douri.png',
         description: 'رواية الدوري عن أبي عمرو من القراءات المتداولة.',
       },
       {
-        name: 'رواية السوسي',
+        name: 'رواية روح',
         image: '/images/sousi.png',
         description: 'رواية السوسي عن أبي عمرو معروفة بجمال الأداء.',
       },
@@ -212,15 +134,15 @@ const cardsData = [
   },
   // أضف باقي البيانات للكروت...
   {
-    title: 'قراءة أبي عمرو البصري',
+    title: 'قراءة خلف',
     buttons: [
       {
-        name: 'رواية الدوري',
+        name: 'رواية اسحاق ',
         image: '/images/douri.png',
         description: 'رواية الدوري عن أبي عمرو من القراءات المتداولة.',
       },
       {
-        name: 'رواية السوسي',
+        name: 'رواية ادريس',
         image: '/images/sousi.png',
         description: 'رواية السوسي عن أبي عمرو معروفة بجمال الأداء.',
       },
@@ -228,22 +150,22 @@ const cardsData = [
   },
   // أضف باقي البيانات للكروت...
   {
-    title: 'قراءة أبي عمرو البصري',
+    title: 'قراءة ابي جعفر',
     buttons: [
       {
-        name: 'رواية الدوري',
+        name: 'رواية ابن وردان',
         image: '/images/douri.png',
         description: 'رواية الدوري عن أبي عمرو من القراءات المتداولة.',
       },
       {
-        name: 'رواية السوسي',
+        name: 'رواية ابن جماز',
         image: '/images/sousi.png',
         description: 'رواية السوسي عن أبي عمرو معروفة بجمال الأداء.',
       },
     ],
   },
   // أضف باقي البيانات للكروت...
-  
+
 ];
 
 export default function EgazatPage() {
@@ -251,7 +173,7 @@ export default function EgazatPage() {
   const navigate = useNavigate();
 
   const handleNavigate = (card, button) => {
-    navigate(`/details/${card.title}/${button.name}`, {
+    navigate(`/egazatpage/${card.title}/${button.name}`, {
       state: {
         image: button.image,
         description: button.description,
@@ -266,9 +188,11 @@ export default function EgazatPage() {
 
   return (
     <>
-      <div className="flex flex-col justify-start items-center p-4" style={{ backgroundColor: 'var(--body-bg-color)', direction: 'rtl' }}>
+      <div className="flex flex-col justify-start items-center mt-11 relative" style={{ backgroundColor: 'var(--body-bg-color)', direction: 'rtl' }}>
+        <img src={design1} alt='design1'className="absolute right-0 top-0 "  />
+        <img src={design2} alt='design2'className="absolute left-0 bottom-[40px] w-56 "  />
         <div
-          className="flex items-center justify-end w-full mb-6 relative"
+          className="flex items-center justify-end w-full mb-8 relative"
           style={{ direction: 'rtl' }}
         >
           <input
@@ -276,14 +200,17 @@ export default function EgazatPage() {
             value={searchTerm}
             onChange={handleSearchChange}
             placeholder="اكتب اسم القراءة"
-            className="p-2 rounded-md border border-green-300 w-80 pr-10"
+            className="p-2 rounded-md border-2 bg-[#EAF8F4] w-80 pr-10 focus:outline-none "
+            style={{
+              borderColor: 'var(--main-dark-color)', // تحديد لون الإطار باستخدام المتغير
+            }}
           />
           <FontAwesomeIcon
             icon={faSearch}
-            className="absolute text-green-700 left-72 top-1/2 transform -translate-y-1/2"
+            className="absolute text-green-700 left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-11 gap-y-11">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-11 gap-y-11 my-8">
           {cardsData
             .filter((card) =>
               card.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -291,8 +218,11 @@ export default function EgazatPage() {
             .map((card, index) => (
               <div
                 key={index}
-                className="p-4 w-80 h-64 rounded-lg shadow-lg border border-green-300"
-                style={{ backgroundColor: 'var(--main-bgLight-color)' }}
+                className="p-8 w-72 h-64 rounded-lg shadow-lg border border-green-300"
+                style={{
+                  backgroundColor: 'var(--main-bgLight-color)',
+                  borderColor: 'var(--main-dark-color)', 
+                }}
               >
                 <h3 className="mb-11 text-lg font-bold text-black text-center">{card.title}</h3>
                 <div className="flex flex-col gap-2 items-center gap-y-3">
@@ -301,7 +231,7 @@ export default function EgazatPage() {
                       key={idx}
                       className="globalButton"
                       onClick={() => handleNavigate(card, button)}
-                      style={{ width:'200px', padding: '10px 0px',  }}
+                      style={{ width: '200px', padding: '10px 0px', }}
                     >
                       {button.name}
                     </button>
@@ -310,7 +240,35 @@ export default function EgazatPage() {
               </div>
             ))}
         </div>
+
       </div>
+      <div className="flex items-center justify-between p-8 my-5 rounded-lg w-full" 
+          style={{
+                  backgroundColor: 'var(--main-dark-color)',
+                }}>
+
+          <div className="w-1/2 text-white text-center flex flex-col items-center" >
+            <h2 className="text-3xl font-semibold mb-4">
+              أحصل على الإجازة بأعلى الأسانيد في العالم
+            </h2>
+            <button className="globalButton text-black py-2 px-3 rounded-lg font-medium shadow-md text-md w-40 mt-8 "
+            style={{
+                  backgroundColor: 'var(--main-bgLight-color)',
+                }}
+            >
+              حجز حصة تدريبية
+            </button>
+          </div>
+          {/* الصورة */}
+          <div className="w-1/2 pr-20">
+            <img
+               src={FoundEgaza}  
+              alt="youtube"
+              className="rounded-lg w-[520px]"
+            />
+          </div>
+
+        </div>
     </>
   );
 }
