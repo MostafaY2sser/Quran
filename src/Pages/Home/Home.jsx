@@ -1,14 +1,24 @@
 
 
+import HeroHome from '../../Components/HeroHome/HeroHome'
+import './home.css'
 
-// import 
+
 
 const Home = () => {
+
+
+
     return (
         <div className="home">
-            {/* <h1>Home Page</h1> */}
+            <HeroHome/>
         </div>
     )
 }
 
 export default Home
+
+
+
+
+

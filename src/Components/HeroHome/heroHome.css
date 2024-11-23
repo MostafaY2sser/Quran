@@ -1,0 +1,66 @@
+/* 
+
+.heroHome {
+    background-color: var(--main-bgLight-color);
+    border-radius: var(--md-border);
+    width: 100%;
+}
+.heroHome .slider{
+    width: 100%;
+}
+
+.heroHome .slider .box{
+    width: 100%;
+    background-color: red;
+    margin: 20px 0 ;
+}
+
+ */
+
+
+ .heroHome {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* إخفاء الأجزاء الخارجة عن العرض */
+  }
+  
+  .heroHome .slider {
+    display: flex;
+    scroll-behavior: smooth; /* حركة سلسة عند التمرير */
+    /* overflow: hidden;  */
+    width: 100%;
+  }
+  .heroHome .slider .box {
+    flex: 0 0 100%; /* كل عنصر يأخذ عرض الحاوية بالكامل */
+    /* background-color: red; */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .heroHome .slider .box img {
+    width: 300px; /* الصورة تشغل العرض بالكامل */
+    height: auto;
+  }
+  
+  .heroHome button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .heroHome button.prev {
+    left: 10px;
+  }
+  
+  .heroHome button.next {
+    right: 10px;
+  }
+  

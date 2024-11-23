@@ -1,7 +1,7 @@
 // import logo from '../../assets/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Footer.css'
-import { faPhone } from "@fortawesome/free-regular-svg-icons";
+// import { faPhone } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
@@ -44,7 +44,7 @@ const Footer = () => {
       <ul className="space-y-3">
         <li className="flex items-center justify-center md:justify-start gap-2">
           <i className="fas fa-phone-alt">
-          <FontAwesomeIcon className='socia-icone' icon={faPhone} /> 
+          {/* <FontAwesomeIcon className='socia-icone' icon={faPhone} />  */}
           </i> 
         </li>
         <li className="flex items-center justify-center md:justify-start gap-2">
