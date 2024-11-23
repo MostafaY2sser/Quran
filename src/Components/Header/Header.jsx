@@ -30,7 +30,7 @@ const Header = () => {
                 <Link to="/" className="logo">
                     <img src={logo} alt="" />
                 </Link>
-                <div className="links flex items-center gap-6 mt-20">
+                <div className="links flex items-center justify  gap-6 ">
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/">الرئيسية</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/egazatpage">الإجازات</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/qurancourse">الكورسات</NavLink>

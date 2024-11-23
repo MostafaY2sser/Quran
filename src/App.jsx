@@ -9,6 +9,12 @@ import QuranCourses from './Pages/QuranCourses';
 import QuranDetailsCourses from './Pages/QuranDetailsCourses';
 
 
+// Swipper 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+// Swipper 
+
 
 
 function App() {
