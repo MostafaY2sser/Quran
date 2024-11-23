@@ -6,6 +6,7 @@ import EgazatPage from './Pages/EgazatPage';
 import EgazatDetailsPage from './Pages/EgazatDetailsPage';
 import Header from "./Components/Header/Header"
 import QuranCourses from './Pages/QuranCourses';
+import QuranDetailsCourses from './Pages/QuranDetailsCourses';
 
 
 
@@ -22,6 +23,8 @@ function App() {
             <Route path='/egazatpage' element={<EgazatPage />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
             <Route path="/qurancourse" element={<QuranCourses/>} />
+            <Route path="/details/:id" element={<QuranDetailsCourses/>} />
+
           </Routes>
           <Footer />
         </Router>
