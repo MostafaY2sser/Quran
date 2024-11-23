@@ -1,66 +1,76 @@
-/* 
-
 .heroHome {
-    background-color: var(--main-bgLight-color);
-    border-radius: var(--md-border);
-    width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 30px 0;
+  border-radius: var(--md-border);
+  background-color: var(--main-bgLight-color);
 }
-.heroHome .slider{
-    width: 100%;
+.heroHome .slider {
+  transition: transform 0.5s ease-in-out; 
 }
-
-.heroHome .slider .box{
-    width: 100%;
-    background-color: red;
-    margin: 20px 0 ;
+.heroHome .box {
+  position: relative;
+  min-width: 100%; 
+  height: 700px;
 }
-
- */
-
-
- .heroHome {
-    position: relative;
-    width: 100%;
-    overflow: hidden; /* إخفاء الأجزاء الخارجة عن العرض */
-  }
-  
-  .heroHome .slider {
-    display: flex;
-    scroll-behavior: smooth; /* حركة سلسة عند التمرير */
-    /* overflow: hidden;  */
-    width: 100%;
-  }
-  .heroHome .slider .box {
-    flex: 0 0 100%; /* كل عنصر يأخذ عرض الحاوية بالكامل */
-    /* background-color: red; */
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  .heroHome .slider .box img {
-    width: 300px; /* الصورة تشغل العرض بالكامل */
-    height: auto;
-  }
-  
-  .heroHome button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .heroHome button.prev {
-    left: 10px;
-  }
-  
-  .heroHome button.next {
-    right: 10px;
-  }
-  
+.heroHome .box .title{
+  text-align: center;
+  width: fit-content;
+  font-size: 40px;
+  color: var(--main-color);
+  font-weight: 700;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 50%;
+  border: 3px solid var(--main-border-color);
+}
+.heroHome .box .sliderImg{
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 37%;
+  height: 65%;
+}
+.heroHome .box .subBox.one{
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+.heroHome .box .subBox.two{
+  position: absolute;
+  top: 45%;
+  right: 30%;
+}
+.heroHome .box .subBox h5{
+  background-color: var(--main-dark-color);
+  width: fit-content;
+  padding: 5px 10px;
+  color: white;
+  border-radius: var(--sm-border);
+  border: 1px solid var(--main-border-color);
+  margin: 0 auto 10px ;
+}
+.heroHome .box .subBox .list{
+  background-color: var(--main-dark-color);
+  border: 1px solid var(--main-border-color);
+  width: 320px;
+  border-radius: var(--md-border);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px;
+}
+.heroHome .box .subBox .list button{
+  background-color: var(--body-bg-color);
+  color: black;
+  border: 1px solid var(--main-border-color);
+  border-radius: var(--sm-border);
+  width: fit-content;
+  margin: 20px auto 0 ;
+  padding: 2px 15px;
+}
+.heroHome .stekar{
+  position: absolute;
+  bottom: 13%;
+  right: 6%;
+}

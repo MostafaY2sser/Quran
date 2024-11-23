@@ -32,8 +32,8 @@ const Header = () => {
                 </Link>
                 <div className="links flex items-center justify  gap-6 ">
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/">الرئيسية</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/holidays">الإجازات</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/courses">الكورسات</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/egazatpage">الإجازات</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/qurancourse">الكورسات</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/prices">الأسعار</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/library">المكتبة</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/sheikhs">الشيوخ</NavLink>
