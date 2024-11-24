@@ -57,6 +57,26 @@ a{
   padding: 10px 20px;
 }
 
+/* Global main header */
+.globalMain-header{
+  color: var(--main-dark-color);
+  line-height: 34px;
+  font-weight: 700;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+}
+.globalMain-header::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 1px; 
+  background-color: var(--main-border-color) ; 
+}
+
 
 @tailwind base;
 @tailwind components;
