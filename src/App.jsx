@@ -9,6 +9,8 @@ import EgazatDetailsPage from './Pages/EgazatDetailsPage';
 import Header from "./Components/Header/Header";
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'animate.css';
+
 
 
 function App() {
