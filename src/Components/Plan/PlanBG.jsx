@@ -12,7 +12,7 @@ const Plan = () => {
 
 
     return (
-      <div className="py-10 flex justify-between items-center flex-col  bg-[--main-bgLight-color]">
+      <div className="py-10 flex justify-between items-center flex-col  bg-[--main-bgLight-color] ">
 
         <div className="head mb-7">
             <h3 className="globalMain-header text-sm md:text-xl">أختر خطة الدراسة الخاصة بك</h3>
@@ -26,37 +26,37 @@ const Plan = () => {
         <div className='flex flex-col gap-2 items-start justify-start'>
 
           <div className='flex items-center justify-center'>
-          <span className='ml-2 p-1 border-2 border-black rounded-full flex items-center justify-center'>
+          <span className='ml-2 p-1 w-7 h-7 border-2   border-black rounded-full flex items-center justify-center'>
                     <FontAwesomeIcon className='text-sm' icon={faCheck} style={{color: "#000000",}} />
                       </span>
-          <p>
+          <p className='font-[700] text-[20px]'>
                     جودة عالية ورسوم منخفضة
                     </p>
           </div>
 
           <div className='flex items-center justify-center'>
-          <span className='ml-2 p-1 border-2 border-black rounded-full flex items-center justify-center'>
+          <span className='ml-2 p-1 w-7 h-7 border-2 border-black rounded-full flex items-center justify-center'>
                     <FontAwesomeIcon className='text-sm' icon={faCheck} style={{color: "#000000",}} />
                       </span>
-          <p>
+          <p className='font-[700] text-[20px]'>
           خصم يصل الى 20%
                     </p>
           </div>
 
           <div className='flex items-center justify-center'>
-          <span className='ml-2 p-1 border-2 border-black rounded-full flex items-center justify-center'>
-                    <FontAwesomeIcon className='text-sm' icon={faCheck} style={{color: "#000000",}} />
-                      </span>
-          <p>
+            <span className='ml-2 p-1 w-7 h-7 border-2 border-black rounded-full flex items-center justify-center'>
+              <FontAwesomeIcon className='text-sm' icon={faCheck} style={{color: "#000000",}} />
+            </span>
+          <p className='font-[700] text-[20px]'>
           8 دولارات بدلاً من 10 دولارات فى الساعة 
           </p>
           </div>
 
           <div className='flex items-center justify-center'>
-          <span className='ml-2 p-1 border-2 border-black rounded-full flex items-center justify-center'>
+          <span className='ml-2 p-1 w-7 h-7 border-2 border-black rounded-full flex items-center justify-center'>
                     <FontAwesomeIcon className='text-sm' icon={faCheck} style={{color: "#000000",}} />
                       </span>
-          <p>
+          <p className='font-[700] text-[20px]'>
           ابتداءً من 40$ شهرياً
           </p>
           </div>
