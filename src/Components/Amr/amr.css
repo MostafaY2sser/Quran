@@ -1,0 +1,16 @@
+
+
+.amr .info{
+    background-color: var(--main-dark-color);
+    border-radius: var(--md-border);
+    border: 2px solid var(--main-border-color );
+    color: white;
+}
+.amr .info img{
+    width: 60%;
+}
+.amr .info .name{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 20px 0;
+}
