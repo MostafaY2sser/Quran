@@ -5,12 +5,14 @@ import Home from './Pages/Home/Home';
 import EgazatPage from './Pages/EgazatPage';
 import EgazatDetailsPage from './Pages/EgazatDetailsPage';
 import Header from "./Components/Header/Header"
+import PricingPage from './Pages/PricingPage';
 
 
 // Swipper 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
 // Swipper 
 
 
@@ -26,6 +28,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/egazatpage' element={<EgazatPage />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
+            <Route path="/pricingpage" element={<PricingPage/>} />
           </Routes>
           <Footer />
         </Router>
