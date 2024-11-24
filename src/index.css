@@ -1,6 +1,4 @@
 
-/* Font Stayle */
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&display=swap');
 
 body {
   font-family: 'Almarai', sans-serif;
@@ -55,6 +53,26 @@ a{
   border-radius: var(--sm-border);
   border: 1px solid var(--main-border-color);
   padding: 10px 20px;
+}
+
+/* Global main header */
+.globalMain-header{
+  color: var(--main-dark-color);
+  line-height: 34px;
+  font-weight: 700;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+}
+.globalMain-header::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 1px; 
+  background-color: var(--main-border-color) ; 
 }
 
 

@@ -9,10 +9,7 @@ import cart from "../../assets/images/iconHeader/cart.png"
 import './header.css'
 import { Link, NavLink } from "react-router-dom"
 
-
 const Header = () => {
-
-
 
     return (
         <div className="headers">
@@ -23,7 +20,9 @@ const Header = () => {
                     <img src={facebook} alt="facebook" />
                     <img src={whatsap} alt="whatsap" />
                 </div>
+                <Link to="/TrialSession">
                 <button className="globalButton">حجز حصة تجريبية</button>
+                </Link>
             </div>
 
             <div className="bottomHeader  flex items-center justify-between ">
