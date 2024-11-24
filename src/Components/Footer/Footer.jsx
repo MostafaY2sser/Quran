@@ -1,14 +1,16 @@
-import logo from '../../assets/images/iconHeader/logo.png'
+// import logo from '../../assets/images/logo.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Footer.css";
+import logo from "../../assets/images/iconHeader/logo.png";
 import face from "../../assets/images/iconHeader/facebook.png";
 import whats from "../../assets/images/iconHeader/whatsap.png";
 import yout from "../../assets/images/iconHeader/youtube.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons/faEnvelopeOpen";
-import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
+import { faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -20,8 +22,8 @@ const Footer = () => {
             src={logo}
             alt="logo"
           />
-          <h3 className='text-justify'>
-            هو موقع لتعلم القراءات العشرة والحصول علو شهادات وإجازات معتمدة من
+          <h3 className="text-justify">
+            هو موقع لتعلم القراءات العشرة والحصول على شهادات وإجازات معتمدة من
             معلمين خبراء فى العلوم القرآنية
           </h3>
         </div>
@@ -51,7 +53,7 @@ const Footer = () => {
                 className="socia-icone ml-2"
                 icon={faArrowLeft}
               />
-              قراءة ابي عمرو البصري
+              قراءة أبي عمرو البصري
             </li>
             <li>
               <FontAwesomeIcon
@@ -72,7 +74,7 @@ const Footer = () => {
 
         {/* القسم الثاني: روابط مرجعية */}
         <div>
-          <h3 className="text-lg font-bold mb-4">روابط سريعه</h3>
+          <h3 className="text-lg font-bold mb-4">روابط سريعة</h3>
           <ul className="space-y-1">
             <li>
               <FontAwesomeIcon
@@ -112,32 +114,25 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* القسم الثالث: دورات مهمة */}
+        {/* القسم الثالث: اتصل بنا */}
         <div>
           <h3 className="text-lg font-bold mb-4">اتصل بنا</h3>
           <ul className="space-y-1">
             <li className="flex items-center justify-start md:justify-start gap-2">
-              <i className="fas fa-phone-alt">
-                <FontAwesomeIcon className="socia-icone" icon={faPhone} />
-              </i>
+              <FontAwesomeIcon className="socia-icone" icon={faPhone} />
+              الهاتف
             </li>
             <li className="flex items-center justify-start md:justify-start gap-2">
-              <i className="fab fa-whatsapp text-green-500">
-                <FontAwesomeIcon className="socia-icone" icon={faWhatsapp} />
-              </i>
+              <FontAwesomeIcon className="socia-icone" icon={faWhatsapp} />
+              الواتساب
             </li>
             <li className="flex items-center justify-start md:justify-start gap-2">
-              <i className="fas fa-envelope">
-                <FontAwesomeIcon
-                  className="socia-icone"
-                  icon={faEnvelopeOpen}
-                />
-              </i>
+              <FontAwesomeIcon className="socia-icone" icon={faEnvelopeOpen} />
+              البريد الإلكتروني
             </li>
             <li className="flex items-center justify-start md:justify-start gap-2">
-              <i className="fas fa-map-marker-alt">
-                <FontAwesomeIcon className="socia-icone" icon={faLocationDot} />
-              </i>
+              <FontAwesomeIcon className="socia-icone" icon={faLocationDot} />
+              الموقع
             </li>
           </ul>
         </div>
@@ -145,19 +140,13 @@ const Footer = () => {
         {/* أيقونات السوشيال ميديا */}
         <div className="mt-8 flex items-end justify-start gap-4">
           <a href="#" className="text-green-500 text-2xl">
-            <i className="fab fa-whatsapp">
-              <img src={whats} alt="whats" />
-            </i>
+            <img src={whats} alt="whats" />
           </a>
           <a href="#" className="text-blue-500 text-2xl">
-            <i className="fab fa-facebook">
-              <img src={face} alt="face" />
-            </i>
+            <img src={face} alt="face" />
           </a>
           <a href="#" className="text-red-500 text-2xl">
-            <i className="fab fa-youtube">
-              <img src={yout} alt="yout" />
-            </i>
+            <img src={yout} alt="yout" />
           </a>
         </div>
       </div>
