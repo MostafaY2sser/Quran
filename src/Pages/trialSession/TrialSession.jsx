@@ -1,10 +1,25 @@
-// import imgSvg1 from'../../assets/images/TrialSession/imgSvg.png';
-// import imgSvg2 from'../../assets/images/TrialSession/imgSvg2.png';
+// import design1 from '../../assets/images/general/design2.png'
+import design2 from'../../assets/images/general/design1.png';
+import EasySteps from '../../Components/EasySteps/EasySteps';
 import Plan from "../../Components/Plan/Plan";
 import "./trialSession.css";
 const TrialSession = () => {
   return (
-    <div>
+    <div className="TrialSessionComponent">
+      
+      <div className='mb-7'>
+      <EasySteps/>
+      </div>
+
+       <div className="text flex flex-col justify-center items-center relative">
+          <h3>يقدم  (.......) جلسات تقييم مجانية</h3>
+          <p>يرجى ملء النموذج فى الاسفل لتحديد موعد الدورة التجريبية المجانية الخاصة بك</p>
+          <span>لن تتم مشاركة بياناتك مع اى أطراف آخرى أبداً</span>
+          <img
+          className='absolute right-[-48px] top-24 transform -translate-y-1/2 z-10'
+          src={design2} alt="design2" />
+       </div>
+
       <div className="flex justify-center items-center p-4">
         <form className="w-full  p-6 rounded-lg shadow-md">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

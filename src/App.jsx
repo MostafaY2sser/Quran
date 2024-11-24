@@ -10,6 +10,7 @@ import Header from "./Components/Header/Header";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'animate.css';
+import EasySteps from './Components/EasySteps/EasySteps';
 
 
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/trialSession'  element={<TrialSession/>}/>
             <Route path='/plan'  element={<Plan/>}/>
+            <Route path='/easySteps'  element={<EasySteps/>}/>
             <Route path='/egazatpage' element={<EgazatPage />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
           </Routes>
