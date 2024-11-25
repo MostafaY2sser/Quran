@@ -6,11 +6,16 @@ import TrialSession from './Pages/trialSession/trialSession';
 import Plan from './Components/Plan/Plan';
 import EgazatPage from './Pages/EgazatPage';
 import EgazatDetailsPage from './Pages/EgazatDetailsPage';
-import Header from "./Components/Header/Header";
+import Header from "./Components/Header/Header"
+import PricingPage from './Pages/PricingPage';
+import EasySteps from './Components/EasySteps/EasySteps';
+
+
+// Swipper 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'animate.css';
-import EasySteps from './Components/EasySteps/EasySteps';
+
 
 
 
@@ -29,6 +34,7 @@ function App() {
             <Route path='/easySteps'  element={<EasySteps/>}/>
             <Route path='/egazatpage' element={<EgazatPage />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
+            <Route path="/pricingpage" element={<PricingPage/>} />
           </Routes>
           <Footer />
         </Router>

@@ -3,6 +3,7 @@ import img8 from "../../assets/images/general/svg8.png";
 import img9 from "../../assets/images/general/svg9.png";
 import design3 from "../../assets/images/general/design3.png";
 import "./easy.css";
+
 const EasySteps = () => {
   return (
     <div className="relative">
