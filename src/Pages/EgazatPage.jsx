@@ -2,9 +2,10 @@ import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import FoundEgaza from "../assets/images/general/FoundEgaza.png"
+
 import design1 from "../assets/images/general/design1.png"
 import design2 from "../assets/images/general/design2.png"
+import EgazatSection from '../Components/EgazatSection';
 
 const cardsData = [
   {
@@ -240,35 +241,9 @@ export default function EgazatPage() {
               </div>
             ))}
         </div>
-
+        <EgazatSection/>
       </div>
-      <div className="flex items-center justify-between p-8 my-5 rounded-lg w-full" 
-          style={{
-                  backgroundColor: 'var(--main-dark-color)',
-                }}>
 
-          <div className="w-1/2 text-white text-center flex flex-col items-center" >
-            <h2 className="text-3xl font-semibold mb-4">
-              أحصل على الإجازة بأعلى الأسانيد في العالم
-            </h2>
-            <button className="globalButton text-black py-2 px-3 rounded-lg font-medium shadow-md text-md w-40 mt-8 "
-            style={{
-                  backgroundColor: 'var(--main-bgLight-color)',
-                }}
-            >
-              حجز حصة تدريبية
-            </button>
-          </div>
-          {/* الصورة */}
-          <div className="w-1/2 pr-20">
-            <img
-               src={FoundEgaza}  
-              alt="youtube"
-              className="rounded-lg w-[520px]"
-            />
-          </div>
-
-        </div>
     </>
   );
 }
