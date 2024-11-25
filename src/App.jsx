@@ -9,6 +9,7 @@ import EgazatDetailsPage from './Pages/EgazatDetailsPage';
 import Header from "./Components/Header/Header"
 import PricingPage from './Pages/PricingPage';
 import EasySteps from './Components/EasySteps/EasySteps';
+import About from './Pages/About/About';
 
 
 // Swipper 
@@ -31,6 +32,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/trialSession'  element={<TrialSession/>}/>
             <Route path='/plan'  element={<Plan/>}/>
+            <Route path='/about'  element={<About/>}/>
             <Route path='/easySteps'  element={<EasySteps/>}/>
             <Route path='/egazatpage' element={<EgazatPage />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
