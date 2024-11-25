@@ -21,11 +21,7 @@ const Plan = () => {
       <div className="flex flex-col gap-y-4 sm:flex-row gap-36 justify-between items-center">
 
         <div className=''>
-<<<<<<< HEAD
           <img className='w-28 md:w-64' src={planImg} alt="" />
-=======
-          <img className='w-28 md:w-52' src={planImg} alt="" />
->>>>>>> 4fe2b273898559c0fd2c04ea6be40f237447b011
         </div>
         <div className='flex flex-col gap-2 items-start justify-start'>
 
@@ -70,11 +66,11 @@ const Plan = () => {
           <button className='globalButton text-[32]'>جميع خطط التسعير</button>
           <img
             style={{ animationDuration: '28s' }}
-            className='w-16 md:w-20 mt-2 ml-10 animate__animated animate__shakeY animate__infinite'
+            className='w-16 md:w-20 mt-2 ml-10 animate_animated animateshakeY animate_infinite'
             src={arrow} alt="arrowPHoto" />
         </div>
       </div>
     </div>
   )
 }
-export default Plan;
+export default Plan

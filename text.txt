@@ -4,4 +4,15 @@ git commit -m "fdf"
 
 git pull origin main
 
-git push origin main 
+git push origin main   ---------   في حالة حدث اي مشكلة غي هذة الخطوة 
+
+
+اعملي
+git add *
+
+git commit -m "fdf"
+
+
+ثم 
+git push origin main
+
