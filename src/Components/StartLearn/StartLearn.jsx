@@ -6,9 +6,13 @@ import dwon from "../../assets/images/home/dwon.png"
 import up from "../../assets/images/home/up.png"
 
 const StartLearn = () => {
+
+
+
+
     return (
         <div className="mb-10">
-            <h4 className="w-[fit-content] font-[700] text-[36px] mx-auto my-0 text-[--main-dark-color] mb-10 border-b-2 border-[--main-border-color]">ابدأ التعلم فى خطوات بسيطة</h4>
+            <h4 className="globalMain-header mb-[30px]">ابدأ التعلم فى خطوات بسيطة</h4>
             <div className="bigBox flex gap-10 justify-center">
                 <div className="box ">
                     <div className="imag bg-[#E4F7F1] w-[130px] h-[130px] flex items-center justify-center rounded-[50%] relative">
