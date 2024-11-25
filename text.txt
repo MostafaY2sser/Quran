@@ -1,0 +1,7 @@
+git add *
+
+git commit -m "fdf"
+
+git pull origin main
+
+git push origin main 

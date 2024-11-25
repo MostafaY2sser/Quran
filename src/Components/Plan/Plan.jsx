@@ -21,7 +21,11 @@ const Plan = () => {
       <div className="flex flex-col gap-y-4 sm:flex-row gap-36 justify-between items-center">
 
         <div className=''>
+<<<<<<< HEAD
           <img className='w-28 md:w-64' src={planImg} alt="" />
+=======
+          <img className='w-28 md:w-52' src={planImg} alt="" />
+>>>>>>> 4fe2b273898559c0fd2c04ea6be40f237447b011
         </div>
         <div className='flex flex-col gap-2 items-start justify-start'>
 
@@ -73,4 +77,4 @@ const Plan = () => {
     </div>
   )
 }
-export default Plan
+export default Plan;
