@@ -5,6 +5,7 @@ import image2 from "../assets/images/prices/image2.png"
 // import design1 from "../assets/images/general/design1.png"
 import PayPal from "../assets/images/prices/PayPal.png"
 import MasterCard from "../assets/images/prices/MasterCard.png"
+import Plan from "../Components/Plan/Plan"
 
 const PricingPage = () => {
     const [activeTab, setActiveTab] = useState("30 دقيقة");
@@ -20,7 +21,7 @@ const PricingPage = () => {
     ];
     return (
         <>
-            <div className="flex items-between justify-start p-11 rounded-md"
+            <div className="flex items-between justify-start p-11 rounded-md my-4"
                 style={{
                     backgroundColor: 'var(--secound-bg-color )',
                 }}
@@ -70,8 +71,10 @@ const PricingPage = () => {
                 </div>
             </div>
             {/* ////////////////////////////// */}
+            <Plan/>
+            {/* //////////////////////// */}
             <div
-                className="text-center py-16"
+                className="text-center py-16 "
                 style={{
                     backgroundColor: "var( --body-bg-color)",
                 }}
