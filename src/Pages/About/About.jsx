@@ -1,5 +1,6 @@
 import EasySteps from "../../Components/EasySteps/EasySteps";
 import Plan from "../../Components/Plan/Plan";
+import EgazatSection from "../../Components/Egazat/EgazatSection";
 import "./about.css";
 import img from "../../assets/images/about/aboutImg.png";
 import img2 from "../../assets/images/about/Container (1).png";
@@ -9,7 +10,6 @@ import img5 from "../../assets/images/about/Container.png";
 import img6 from "../../assets/images/about/Group.png";
 import img7 from "../../assets/images/about/SVG (1).png";
 import img8 from "../../assets/images/about/SVG.png";
-
 import img9 from "../../assets/images/about/why-us-Img/Overlay.png";
 import img10 from "../../assets/images/about/why-us-Img/Overlay (1).png";
 import img11 from "../../assets/images/about/why-us-Img/Overlay (2).png";
@@ -357,6 +357,7 @@ const About = () => {
 
       <EasySteps />
       <Plan />
+      <EgazatSection />
     </div>
   );
 };

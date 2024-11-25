@@ -74,4 +74,4 @@ const Opinions = () => {
     )
 }
 
-export default Opinions
+export default Opinions;

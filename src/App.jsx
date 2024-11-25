@@ -8,18 +8,22 @@ import EgazatPage from './Pages/EgazatPage';
 import EgazatDetailsPage from './Pages/EgazatDetailsPage';
 import Header from "./Components/Header/Header"
 import PricingPage from './Pages/PricingPage';
-<<<<<<< HEAD
 import EasySteps from './Components/EasySteps/EasySteps';
 import About from './Pages/About/About';
+import { ItsLibrary } from './Pages/ItsLibrary/ItsLibrary';
 
-=======
+
+
 import 'animate.css';
->>>>>>> 0dadd85c19744cac05af2ef40b29b417b1c67cc8
 
 // Swipper 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Read from './Components/read/read';
+import Books from './Components/books/books';
+import Visible from './Components/Visible/Visible';
+import Voice from './Components/Itsvoice/voice';
 
 
 
@@ -33,16 +37,18 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
-<<<<<<< HEAD
             <Route path='/trialSession'  element={<TrialSession/>}/>
             <Route path='/plan'  element={<Plan/>}/>
             <Route path='/about'  element={<About/>}/>
             <Route path='/easySteps'  element={<EasySteps/>}/>
-=======
             <Route path='/trialSession' element={<TrialSession />} />
             <Route path='/plan' element={<Plan />} />
->>>>>>> 0dadd85c19744cac05af2ef40b29b417b1c67cc8
             <Route path='/egazatpage' element={<EgazatPage />} />
+            <Route path='/itsLibrary' element={<ItsLibrary />} />
+            <Route path='/read' element={<Read />} /> 
+            <Route path='/books' element={<Books />} />
+            <Route path='/visible' element={<Visible />} />
+            <Route path='/Voice' element={<Voice />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
             <Route path="/pricingpage" element={<PricingPage />} />
           </Routes>
