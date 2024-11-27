@@ -14,6 +14,8 @@ import 'animate.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import SubscriptionForm from './Pages/SubscriptionForm';
+import CommonQuestions from './Pages/ComonQuestions';
 
 
 
@@ -32,6 +34,9 @@ function App() {
             <Route path='/egazatpage' element={<EgazatPage />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
             <Route path="/pricingpage" element={<PricingPage />} />
+            <Route path="/subsriptionform" element={<SubscriptionForm/>} />
+            <Route path="/commonQuestions" element={<CommonQuestions/>} />
+
           </Routes>
           <Footer />
         </Router>
