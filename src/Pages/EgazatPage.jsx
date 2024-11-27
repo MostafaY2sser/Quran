@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom';
-import React, { useState } from 'react'; 
+import { useState } from 'react'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import design1 from "../assets/images/general/design1.png"
 import design2 from "../assets/images/general/design2.png"
-import EgazatSection from '../Components/EgazatSection';
+import EgazatSection from '../Components/Egazat/EgazatSection';
+
 
 const cardsData = [
   {
@@ -241,7 +242,7 @@ export default function EgazatPage() {
               </div>
             ))}
         </div>
-        <EgazatSection/>
+        <EgazatSection />
       </div>
 
     </>
