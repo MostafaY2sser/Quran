@@ -4,9 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import sliderImg from '../../assets/images/home/blog_2.png'
 import like from '../../assets/images/general/wishList.png'
+import { useState } from 'react';
 
 
 const Blogs = () => {
+
+
+    // State For Search input
+    const [searchText, setSearchText] = useState('');
 
 
     const sliderDate = [
@@ -42,6 +47,11 @@ const Blogs = () => {
         },
     ]
 
+    // Function To Search Teacher
+    const filteredData = sliderDate.filter((teacher) =>
+        teacher.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+
 
 
     return (
@@ -52,14 +62,19 @@ const Blogs = () => {
                 <div className="text-[30px] font-[700] text-[--main-dark-color] border-b-2 border-b-[--main-border-color]">مقالات مميزة</div>
                 <div className="w-[30%] border-2 border-[--main-dark-color] rounded-[10px] overflow-hidden py-2 px-3 flex items-center gap-3">
                     <FontAwesomeIcon  className="text-[--main-dark-color]" icon={faSearch} />
-                    <input className="w-[90%] bg-[transparent] border-[none] outline-[0]" type="text" placeholder="اكتب اسم القراءة" />
+                    <input 
+                        className="w-[90%] bg-[transparent] border-[none] outline-[0]" 
+                        type="text" placeholder="اكتب اسم القراءة" 
+                        value={searchText}
+                        onChange={(e) => setSearchText(e.target.value)} 
+                    />
                 </div>
             </div>
 
             <div className="slider w-[100%] p-10 bg-[--main-bgLight-color] overflow-x-scroll flex gap-5 scroll-smooth flex-row-reverse "
                 style={{scrollbarWidth: "none",msOverflowStyle: "none" ,}}
             >
-                {sliderDate.map((item , index)=>(
+                {filteredData.map((item , index)=>(
                     <div className="box  min-w-[28%] p-10 bg-[--main-dark-color] flex flex-col items-center gap-3 rounded-[15px] relative" key={index}>
                         <img className="" src={item.img} alt="" />
                         <h4 className="text-[30px] text-[white]">{item.name}</h4>

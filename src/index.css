@@ -74,9 +74,24 @@ a{
   transform: translateX(-50%);
   width: 50%; 
   height: 1px; 
-  background-color: var(--main-border-color) ; 
+  background-color: var(--main-border-color); 
 }
 
+/* custom-underline */
+.custom-underline {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; 
+   right: 0;
+  width: 75px; 
+  height: 1px; 
+  background-color: var(--main-border-color);
+}
 
 @tailwind base;
 @tailwind components;

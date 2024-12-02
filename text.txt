@@ -1,6 +1,6 @@
 git add *
 
-git commit -m "fdf"
+git commit -m "nada"
 
 git pull origin main
 
