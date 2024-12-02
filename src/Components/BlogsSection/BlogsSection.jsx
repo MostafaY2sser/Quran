@@ -21,8 +21,8 @@ const BlogsSection = () => {
 
 
     return (
-        <div className='mb-[100px]'>
-            <h4 className='globalMain-header mb-[40px]'>المدونات</h4>
+        <div className='my-[80px]'>
+            <h4 className='globalMain-header mb-[40px] text-[40px]'>المدونات</h4>
             <div className="bigBox flex justify-center gap-[50px]">
                 { data.map((item , index)=> (
                     <div 

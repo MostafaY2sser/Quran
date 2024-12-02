@@ -45,7 +45,7 @@ const Opinions = () => {
 
     return (
         <div className='mt-20 mb-10'>
-            <h4 className='globalMain-header'>آراء أولياء الامور والطلاب </h4>
+            <h4 className='globalMain-header text-[40px]'>آراء أولياء الامور والطلاب </h4>
             <div className="bigBox flex flex-col gap-5 mt-10 ">
                 { data.map((item , index)=> (
                     <div className="box p-10  rounded-[10px] bg-[--main-bgLight-color] flex items-center w-[100%]" key={index}>

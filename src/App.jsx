@@ -14,6 +14,10 @@ import 'animate.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import ShoppingCart from './Pages/ShoppingCart/ShoppingCart';
+import WishList from './Pages/WishList/WishList';
+import Blogs from './Pages/Blogs/Blogs';
+import AlShehk from './Pages/AlShehk/AlShehk';
 
 
 
@@ -27,6 +31,10 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/shoppingCart' element={<ShoppingCart />} />
+            <Route path='/wishList' element={<WishList />} />
+            <Route path='/blogs' element={<Blogs />} />
+            <Route path='/elsheikhs' element={<AlShehk />} />
             <Route path='/trialSession' element={<TrialSession />} />
             <Route path='/plan' element={<Plan />} />
             <Route path='/egazatpage' element={<EgazatPage />} />

@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import FoundEgaza from "../assets/images/general/FoundEgaza.png"
 const EgazatSection = () => {
     return (
