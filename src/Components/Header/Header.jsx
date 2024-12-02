@@ -37,8 +37,13 @@ const Header = () => {
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/ItsLibrary">المكتبة</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/sheikhs">الشيوخ</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/blogs">المدونات</NavLink>
+<<<<<<< HEAD
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/commonQuestions">الأسئلة الشائعة</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/more">المزيد</NavLink>
+=======
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/faq">الأسئلة الشائعة</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/about">المزيد</NavLink>
+>>>>>>> 22eae4eb33cce4e4dabf49d7f32a6c0d8d31024a
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/contact">تواصل معنا</NavLink>
                 </div>
                 <div className="left flex items-center gap-5">

@@ -20,10 +20,15 @@ import 'animate.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+<<<<<<< HEAD
+import SubscriptionForm from './Pages/SubscriptionForm';
+import CommonQuestions from './Pages/ComonQuestions';
+=======
 import Read from './Components/read/read';
 import Books from './Components/books/books';
 import Visible from './Components/Visible/Visible';
 import Voice from './Components/Itsvoice/voice';
+>>>>>>> 22eae4eb33cce4e4dabf49d7f32a6c0d8d31024a
 
 
 
@@ -51,6 +56,9 @@ function App() {
             <Route path='/Voice' element={<Voice />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
             <Route path="/pricingpage" element={<PricingPage />} />
+            <Route path="/subsriptionform" element={<SubscriptionForm/>} />
+            <Route path="/commonQuestions" element={<CommonQuestions/>} />
+
           </Routes>
           <Footer />
         </Router>

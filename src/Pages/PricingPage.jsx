@@ -6,8 +6,15 @@ import image2 from "../assets/images/prices/image2.png"
 import PayPal from "../assets/images/prices/PayPal.png"
 import MasterCard from "../assets/images/prices/MasterCard.png"
 import Plan from "../Components/Plan/Plan"
+import EasySteps from "../Components/EasySteps/EasySteps";
+import { useNavigate } from 'react-router-dom';
 
 const PricingPage = () => {
+    const navigate = useNavigate(); 
+    const handleClick = () => {
+      navigate('/subsriptionform'); 
+    };
+
     const [activeTab, setActiveTab] = useState("30 دقيقة");
 
     // بيانات البطاقات
@@ -44,26 +51,26 @@ const PricingPage = () => {
                 {/* القسم الأيسر */}
                 <div className="text-right space-y-4 pr-28">
                     <div className="flex items-start">
-                        <span className="text-black text-xl font-bold">•</span>
-                        <p className="ml-3 text-gray-800">
+                        <span className="text-black text-2xl font-bold">•</span>
+                        <p className="mr-3 text-gray-800 text-2xl">
                             يتم فرض الرسوم الشهرية على أساس شهري بالدولار الأمريكي.
                         </p>
                     </div>
                     <div className="flex items-start">
-                        <span className="text-black text-xl font-bold">•</span>
-                        <p className="ml-3 text-gray-800">
+                        <span className="text-black text-2xl font-bold">•</span>
+                        <p className="mr-3 text-gray-800 text-2xl ">
                             الرسوم المفروضة مقدما مع ضمان استرداد الأموال بالكامل.
                         </p>
                     </div>
                     <div className="flex items-start">
-                        <span className="text-black text-xl font-bold">•</span>
-                        <p className="ml-3 text-gray-800">
+                        <span className="text-black text-2xl font-bold">•</span>
+                        <p className="mr-3 text-gray-800 text-2xl">
                             إذا كنت تريد خطة مخصصة، فسنقوم بترتيبها إن شاء الله.
                         </p>
                     </div>
                     <div className="flex items-start">
-                        <span className="text-black text-xl font-bold">•</span>
-                        <p className="ml-3 text-gray-800">
+                        <span className="text-black text-2xl font-bold">•</span>
+                        <p className="mr-3 text-gray-800 text-2xl">
                             المدفوعات عن طريق الحساب المصرفي، أو PayPal أو بطاقة الخصم أو
                             الائتمان.
                         </p>
@@ -71,7 +78,7 @@ const PricingPage = () => {
                 </div>
             </div>
             {/* ////////////////////////////// */}
-            <Plan/>
+            <Plan />
             {/* //////////////////////// */}
             <div
                 className="text-center py-16 "
@@ -132,7 +139,7 @@ const PricingPage = () => {
                 </div>
 
                 {/* البطاقات */}
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 py-16 border rounded-2xl  "
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 py-16 border rounded-2xl px-6 "
                     style={{
                         backgroundColor: 'var(--secound-bg-color )',
 
@@ -216,8 +223,18 @@ const PricingPage = () => {
                     />
                 </div>
 
-
             </div>
+            <EasySteps />
+            <div className="flex justify-center my-16">
+                <button
+                    type="button"
+                    className="bg-[#0F8A73] text-white py-3 px-8 border-2 rounded-xl border-[#F0AD4E]"
+                    onClick={handleClick} 
+                >
+                    جميع خطط التسعير
+                </button>
+            </div>
+
         </>
     );
 };
