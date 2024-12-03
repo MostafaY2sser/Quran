@@ -11,7 +11,11 @@ import PricingPage from './Pages/PricingPage';
 import EasySteps from './Components/EasySteps/EasySteps';
 import About from './Pages/About/About';
 import { ItsLibrary } from './Pages/ItsLibrary/ItsLibrary';
-
+import Login from './Pages/Authpages/Login';
+import Regester from './Pages/Authpages/regester';
+import Newpass from "./Pages/Authpages/newpass"; 
+import Joinus from './Pages/Joinus';
+import Contact from './Pages/contact';
 
 
 import 'animate.css';
@@ -24,6 +28,7 @@ import Read from './Components/read/read';
 import Books from './Components/books/books';
 import Visible from './Components/Visible/Visible';
 import Voice from './Components/Itsvoice/voice';
+
 
 
 
@@ -51,6 +56,11 @@ function App() {
             <Route path='/Voice' element={<Voice />} />
             <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
             <Route path="/pricingpage" element={<PricingPage />} />
+              <Route path='/login'  element={<Login/>}/>
+              <Route path='/Regester' element={<Regester/>}/>
+              <Route path= '/newpass' element={<Newpass/>}/>
+              <Route path='/joinus'  element={<Joinus/>}/>
+              <Route path='/contact'  element={<Contact/>}/>
           </Routes>
           <Footer />
         </Router>
