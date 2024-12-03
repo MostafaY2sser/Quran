@@ -11,6 +11,7 @@ import PricingPage from './Pages/PricingPage';
 import EasySteps from './Components/EasySteps/EasySteps';
 import About from './Pages/About/About';
 import { ItsLibrary } from './Pages/ItsLibrary/ItsLibrary';
+import Courses from './Pages/Courses/Courses';
 
 
 import 'animate.css';
@@ -32,6 +33,7 @@ import Visible from './Components/Visible/Visible';
 import Voice from './Components/Itsvoice/voice';
 import ProfileTecher from './Pages/ProfileTecher/ProfileTecher';
 import Ratings from './Pages/Ratings/Ratings';
+import CoursesPage from './Pages/CoursesPage/CoursesPage';
 
 
 
@@ -68,6 +70,9 @@ function App() {
             <Route path="/commonQuestions" element={<CommonQuestions/>} />
             <Route path="/ProfileTeacher/:name" element={<ProfileTecher/>} />
             <Route path="/ratings" element={<Ratings/>} />
+            <Route path="/coursesPage" element={<CoursesPage/>} />
+            <Route path="/qurancourse" element={<Courses/>} />
+
           </Routes>
           <Footer />
         </Router>

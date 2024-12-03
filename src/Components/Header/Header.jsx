@@ -36,7 +36,7 @@ const Header = () => {
                 <div className="links flex items-center justify  gap-6 ">
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/">الرئيسية</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/egazatpage">الإجازات</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/qurancourse">الكورسات</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/coursesPage">الكورسات</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/pricingpage">الأسعار</NavLink>
                     {/* <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/library">المكتبة</NavLink> */}
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/ItsLibrary">المكتبة</NavLink>
@@ -47,6 +47,7 @@ const Header = () => {
                     {/* <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/more">المزيد</NavLink> */}
                     {/* <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/faq">الأسئلة الشائعة</NavLink> */}
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/about">المزيد</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/more">المزيد</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/contact">تواصل معنا</NavLink>
                 </div>
                 <div className="left flex items-center gap-5">
