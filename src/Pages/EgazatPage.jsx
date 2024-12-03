@@ -171,7 +171,7 @@ const cardsData = [
 
 export default function EgazatPage() {
 
-  const [searchTerm, setSearchTerm] = useState(''); 
+  const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
   const handleNavigate = (card, button) => {
@@ -190,43 +190,39 @@ export default function EgazatPage() {
 
   return (
     <>
-      <div className="flex flex-col justify-start items-center mt-11 relative" style={{ backgroundColor: 'var(--body-bg-color)', direction: 'rtl' }}>
-        <img src={design1} alt='design1' className="absolute right-0 top-0 " />
-        <img src={design2} alt='design2' className="absolute left-0 bottom-[40px] w-56 " />
-        <div
-          className="flex items-center justify-end w-full mb-8 relative"
-          style={{ direction: 'rtl' }}
-        >
+      <div className="mt-11 px-4 lg:px-20 relative" style={{ backgroundColor: 'var(--body-bg-color)' }}>
+        {/* Background Images */}
+        <img src={design1} alt="design1" className="absolute right-0 top-0 w-20 sm:w-28 lg:w-auto" />
+        <img src={design2} alt="design2" className="absolute left-0 bottom-[40px] w-28 sm:w-40 lg:w-56" />
+  
+        <div className="flex justify-end my-6 lg:my-10">
+        <div className="w-full lg:w-[30%] border-2 border-[--main-dark-color] rounded-[10px] overflow-hidden py-2 px-3 flex items-center gap-3">
+          <FontAwesomeIcon className="text-[--main-dark-color]" icon={faSearch} />
           <input
             type="text"
             value={searchTerm}
             onChange={handleSearchChange}
             placeholder="اكتب اسم القراءة"
-            className="p-2 rounded-md border-2 bg-[#EAF8F4] w-80 pr-10 focus:outline-none "
-            style={{
-              borderColor: 'var(--main-dark-color)', // تحديد لون الإطار باستخدام المتغير
-            }}
-          />
-          <FontAwesomeIcon
-            icon={faSearch}
-            className="absolute text-green-700 left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
+            className="w-full bg-transparent border-none outline-none"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-11 gap-y-11 my-8 ">
+      </div>
+
+  
+        {/* Cards Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8" style={{ direction: 'rtl' }}>
           {cardsData
-            .filter((card) =>
-              card.title.toLowerCase().includes(searchTerm.toLowerCase())
-            )
+            .filter((card) => card.title.toLowerCase().includes(searchTerm.toLowerCase()))
             .map((card, index) => (
               <div
                 key={index}
-                className="p-8 w-72 h-64 rounded-lg shadow-lg border border-green-300 relative"
+                className="p-6 lg:p-8 rounded-lg shadow-lg border border-green-300 relative"
                 style={{
                   backgroundColor: 'var(--main-bgLight-color)',
                   borderColor: 'var(--main-dark-color)',
                 }}
               >
-                <h3 className="mb-11 text-lg font-bold text-black text-center">{card.title}</h3>
+                <h3 className="mb-4 text-lg font-bold text-black text-center lg:mb-8">{card.title}</h3>
                 <div className="flex flex-col gap-2 items-center gap-y-3">
                   {card.buttons.map((button, idx) => (
                     <button
@@ -238,19 +234,16 @@ export default function EgazatPage() {
                       {button.name}
                     </button>
                   ))}
-                  <img
-                    className="absolute top-4 left-5 cursor-pointer w-6"
-                    src={disLike}
-                    alt=""
-                  />
+                  <img className="absolute top-4 left-5 cursor-pointer w-6" src={disLike} alt="" />
                 </div>
               </div>
-
             ))}
         </div>
+  
+        {/* Additional Section */}
         <EgazatSection />
       </div>
-
     </>
   );
+  
 }
