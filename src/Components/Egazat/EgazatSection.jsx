@@ -1,3 +1,5 @@
+
+
 import FoundEgaza from "../../assets/images/general/FoundEgaza.png"
 const EgazatSection = () => {
     return (

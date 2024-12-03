@@ -4,8 +4,6 @@
     align-items: start;
     flex-direction: column; 
 }
-
-
 .easyComponent{
     display: flex;
     flex-direction: column;

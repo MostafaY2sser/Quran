@@ -47,7 +47,7 @@ const WhyUs = () => {
 
     return ( 
         <div className='w-[100%]  my-20 bg-[--main-bgLight-color] py-10 '>
-            <h2 className='globalMain-header mb-[40px]'>لماذا نحن</h2>
+            <h2 className='globalMain-header mb-[40px] text-[40px]'>لماذا نحن</h2>
             <div className="box flex flex-wrap justify-between">
                 { data.map((item , index)=> (
                     <div className="w-[33%] flex items-center flex-col mb-10"  key={index}>
