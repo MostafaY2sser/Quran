@@ -4,10 +4,14 @@ import planImg from '../../assets/images/general/planImg.png'
 // import './plan.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const Plan = () => {
+  const navigate = useNavigate(); 
+  const handleClick = () => {
+    navigate('/subsriptionform'); 
+  };
 
 
 
@@ -63,7 +67,9 @@ const Plan = () => {
         </div>
 
         <div className='flex flex-col items-center justify-center'>
-          <button className='globalButton text-[32]'>جميع خطط التسعير</button>
+          <button className='globalButton text-[32]'
+            onClick={handleClick} 
+          >جميع خطط التسعير</button>
           <img
             style={{ animationDuration: '28s' }}
             className='w-16 md:w-20 mt-2 ml-10 animate_animated animateshakeY animate_infinite'

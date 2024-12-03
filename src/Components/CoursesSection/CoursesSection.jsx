@@ -32,7 +32,7 @@ const CoursesSection = () => {
 
     return (
         <div className='bg-[--main-bgLight-color] py-10'>
-            <h4 className='globalMain-header mb-[40px]'>الدورات والمناهج عبر الانترنت </h4>
+            <h4 className='globalMain-header mb-[40px] text-[40px]'>الدورات والمناهج عبر الانترنت </h4>
             <div className="bigBox flex flex-wrap justify-center gap-10 " >
                 { data.map((item , index)=> (
                     <div className="box w-[40%] bg-[--main-dark-color] py-10 gap-10 rounded-[15px] border-2 border-[--main-border-color] flex flex-col items-center justify-between" key={index}>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import sliderImg from "../../assets/images/home/heroImg.png";
-// import border from "../../assets/images/home/border.png";
+import border from "../../assets/images/home/border.png";
 import stekar from "../../assets/images/home/stekar.png";
 
 import "./heroHome.css";
@@ -64,20 +64,7 @@ const HeroHome = () => {
       img: sliderImg,
       imgStekar: stekar,
     },
-    {
-      title: "قراءة ة ابن كثير",
-      subTitleOne: "1. رواية قالون عن نافع:",
-      subTitleTwo: "1. رواية  قالون عن نافع:",
-      one1: "- الإمالة: قالون يميل قليلًا في بعض الكلمات، لكنه أقل استخدامًا للإمالة مقارنة بورش.",
-      two2: "- : يتبع في روايته أحكام المد الطبيعي والمد المنفصل.",
-      three3: "- الإظهار والإدغام: قالون يراعي الإدغام بغنة في بعض المواضع دون غيرها، وفقًا لقواعد محددة.",
-      one4: "- الإمالة: قالون يميل قليلًا في بعض الكلمات، لكنه أقل استخدامًا للإمالة مقارنة بورش.",
-      two5: "-المد: يتبع في روايته أحكام المد الطبيعي والمد المنفصل.",
-      three6: "- الإظهار والإدغام: قالون يراعي الإدغام بغنة في بعض المواضع دون غيرها، وفقًا لقواعد محددة.",
-      img: sliderImg,
-      imgStekar: stekar,
-    },
-  ];
+  ]
 
 
   // Slider :-----------------------------------------
@@ -121,7 +108,7 @@ const HeroHome = () => {
               </div>
             </div>
             <img className="stekar" src={item.imgStekar} alt="" />
-            {/* <img className="borderImg" src={border} alt="" /> */}
+            <img className="borderImg" src={border} alt="" />
           </div>
         ))}
       </div>
