@@ -10,6 +10,11 @@ import level_2 from '../../assets/images/courses/level_2.png'
 import level_3 from '../../assets/images/courses/level_3.png'
 import center from '../../assets/images/courses/center.png'
 import CoursesPage from '../CoursesPage/CoursesPage'
+import Container from '../../assets/images/courses/Container.png'
+import Container_1 from '../../assets/images/courses/Container_1 .png'
+import Container_2 from '../../assets/images/courses/Container_2 .png'
+import Container_3 from '../../assets/images/courses/Container_3.png'
+import Container_4 from '../../assets/images/courses/Container_4.png'
 
 
 
@@ -19,20 +24,113 @@ const Courses = () => {
 
 
     const fiveBox = [
-        { title : "الخطة" , textOne : "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن " , textTwo : "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة" , textThree :"لاحتياجاتهم ووتيرتها." , img : one},
-        { title : "الإتقان" , textOne : "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن " , textTwo : "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة" , textThree :"لاحتياجاتهم ووتيرتها." , img : two},
-        { title : "المراجعة والإتقان" , textOne : "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن " , textTwo : "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة" , textThree :"لاحتياجاتهم ووتيرتها." , img : three},
-        { title : "إتقان التجويد" , textOne : "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن " , textTwo : "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة" , textThree :"لاحتياجاتهم ووتيرتها." , img : four},
-        { title : "التقدم الشخصي" , textOne : "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن " , textTwo : "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة" , textThree :"لاحتياجاتهم ووتيرتها." , img : five},
+        { title: "الخطة", textOne: "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن ", textTwo: "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة", textThree: "لاحتياجاتهم ووتيرتها.", img: one },
+        { title: "الإتقان", textOne: "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن ", textTwo: "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة", textThree: "لاحتياجاتهم ووتيرتها.", img: two },
+        { title: "المراجعة والإتقان", textOne: "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن ", textTwo: "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة", textThree: "لاحتياجاتهم ووتيرتها.", img: three },
+        { title: "إتقان التجويد", textOne: "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن ", textTwo: "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة", textThree: "لاحتياجاتهم ووتيرتها.", img: four },
+        { title: "التقدم الشخصي", textOne: "سيتعلم الطلاب حفظ القرآن , إما جزء محدد أو القرآن ", textTwo: "بأكمله , بواسطة اتباع خطة خطوة بخطوة مناسبة", textThree: "لاحتياجاتهم ووتيرتها.", img: five },
     ]
 
 
     const dataLevels = [
-        { img :  level_1 , title : "مستوى المبتدئين" , text : " بالنسبة للطلاب الجدد في اللغة العربية القرآنية والتجويد ، يركز هذا المستوى على القراءة التأسيسية والسور القصيرة الحفظ مثل جزء عم. "},
-        { img :  level_2 , title : "مستوى المتوسط" , text : "سيعمل الطلاب الذين يتمتعون بمهارات القراءة والتجويد الأساسية على سور حفظ أطول مع إتقان تلاوتهم وتقنيات الحفظ."},
-        { img :  level_3 , title : "مستوى المتقدم" , text : "في هذا المستوى ، يركز الطلاب على حفظ القرآن بأكمله أو أقسام أكبر ، وتطبيق استراتيجيات حفظ المتقدمة ، والمراجعة بانتظام."},
+        { img: level_1, title: "مستوى المبتدئين", text: " بالنسبة للطلاب الجدد في اللغة العربية القرآنية والتجويد ، يركز هذا المستوى على القراءة التأسيسية والسور القصيرة الحفظ مثل جزء عم. " },
+        { img: level_2, title: "مستوى المتوسط", text: "سيعمل الطلاب الذين يتمتعون بمهارات القراءة والتجويد الأساسية على سور حفظ أطول مع إتقان تلاوتهم وتقنيات الحفظ." },
+        { img: level_3, title: "مستوى المتقدم", text: "في هذا المستوى ، يركز الطلاب على حفظ القرآن بأكمله أو أقسام أكبر ، وتطبيق استراتيجيات حفظ المتقدمة ، والمراجعة بانتظام." },
     ]
 
+    const cardsData = [
+        {
+            id: 1,
+            bgColor: "#96C5BD",
+            imgSrc: Container,
+            title: "مصحف حافظ كامل",
+            text: "سيبدأ الطلاب بنجاح في حفظ القرآن الكريم بالكامل أو اختيار أجزاء بناء على أهدافهم الشخصية ومناهجهم الدراسية.",
+        
+        },
+        {
+            id: 2,
+            bgColor: "#AFDBDC",
+            imgSrc: Container_1,
+            title: "إتقان التجويد في حافظ",
+            text: "سيقوم كل طالب بحفظ وتلاوة القرآن بدقة والطلاقة من خلال تعلم قواعد التجويد المناسبة.",
+            
+        },
+        {
+            id: 3,
+            bgColor: "#F8D8B1",
+            imgSrc: Container_2,
+            title: "خطط القرآن",
+            text: "تطوير تقنيات مراجعة قوية للحفاظ على المدى الطويل الاحتفاظ بأجزاء القرآن.",
+            
+        },
+        {
+            id: 4,
+            bgColor: "#D6EBE1",
+            imgSrc: Container_3,
+            title: "االتعلم الذاتي",
+            text: "مع خطط الدروس المخصصة التي تتكيف مع قدراتهم و الجداول الزمنية ، سيحقق الطلاب الأهداف الخاصة بهم بأنفسهم وتيرة.",
+           
+        },
+        {
+            id: 5,
+            bgColor: "#78C1C1CF",
+            imgSrc: Container_4,
+            title: "المسائلة الشخصية",
+            text: "سيكتسب الطلاب الثقة في تقدمهم مع الانتظام التقييمات والتعليقات الشخصية للحفاظ عليها المسار.",
+            
+        },
+    ];
+
+    const cardsData2 = [
+        {
+            id: 1,
+            bgColor: "#CBEDD5",
+            imgSrc: Container,
+            title: "مدرسون معتمدون من حافظ من الأزهر",
+            text: "جميع مدرسينا مؤهلون تأهيلا عاليا ، بعد أن حصلوا على إجازة وشهادات إسلامية من جامعة الأزهر ، مما يضمن أعلى مستوى من التدريس.",
+
+        },
+        {
+            id: 2,
+            bgColor: "#CBEDD5",
+            imgSrc: Container,
+            title: "بوابة بدء التعلم",
+            text: "يمكن للطلاب الوصول إلى المحاضرات المسجلة من خلال البوابة ، مما يمكنهم من مراجعة الدروس بسهولة لتحسين الحفظ.",
+
+        },
+        {
+            id: 3,
+            bgColor: "#CBEDD5",
+            imgSrc: Container,
+            title: "تسجيلات الفيديو للتعلم",
+            text: "تتيح بوابتنا الإلكترونية سهلة الاستخدام للطلاب تتبع تقدمهم والاتصال بسهولة بمعلمهم ، مما يضمن تحقيقهم للعلم بكفاءة.",
+
+        },
+        {
+            id: 4,
+            bgColor: "#CBEDD5",
+            imgSrc: Container,
+            title: "ملاحظات شاملة",
+            text: "يتم تقديم ملاحظات شخصية بعد كل جلسة ، مما يساعد الطلاب على فهم نقاط قوتهم ومجالات التحسين.",
+
+        },
+        {
+            id: 5,
+            bgColor: "#CBEDD5",
+            imgSrc: Container,
+            title: "إشراف أكاديمي",
+            text: "نحن نقدم خيارات جدولة مرنة ، مما يسمح للطلاب بإعادة جدولة الفصول الدراسية حسب الحاجة لتناسب حياتهم المزدحمة.",
+
+        },
+        {
+            id: 6,
+            bgColor: "#CBEDD5",
+            imgSrc: Container,
+            title: "أساليب تعليمية فعّالة",
+            text: "يتم تدريب مدرسينا لتعليم الطلاب من خلفيات ثقافية متنوعة ، مما يجعل تجربة التعلم شاملة ومحترمة.",
+
+        },
+    ];
 
 
     return (
@@ -84,7 +182,7 @@ const Courses = () => {
 
 
             <div className="fiveBox bg-[--main-bgLight-color] p-10 flex flex-wrap items-center justify-center">
-                { fiveBox.map((item , index) => (
+                {fiveBox.map((item, index) => (
                     <div className="box rounded-[16px] w-[32%] my-3 mx-1 h-[200px] text-[white] flex items-center justify-center flex-col bg-[--main-green-color] relative" key={index}>
                         <h4 className="text-[26px] font-[700] mb-5">{item.title}</h4>
                         <p>{item.textOne}</p>
@@ -92,7 +190,7 @@ const Courses = () => {
                         <p>{item.textThree}</p>
                         <img className="absolute top-3 right-3" src={item.img} alt="" />
                     </div>
-                )) }
+                ))}
             </div>
 
 
@@ -102,44 +200,44 @@ const Courses = () => {
                     <div className="rounded-lg overflow-hidden cursor-pointer shadow-lg">
                         <details className='w-[300px] rounded-lg'>
                             <summary className="bg-[--main-bgLight-color]  text-[--main-green-color] p-2 ">تعلم قواعد التجويد</summary>
-                            <p  className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
+                            <p className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
                         </details>
                     </div>
                     <div className="rounded-lg overflow-hidden  cursor-pointer shadow-lg">
                         <details className='w-[300px] rounded-lg'>
                             <summary className="bg-[--main-bgLight-color]  text-[--main-green-color] p-2 ">تعلم القراءة باللغة العربية</summary>
-                            <p  className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيعمل الطلاب المتقدمون على حفظ القرآن الكريم بالكامل من خلال التسجيل في دورة حفظ مكثفة , باتباع خطة منظمة وشخصية لتحقيق هذا الهدف النبيل.</p>
+                            <p className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيعمل الطلاب المتقدمون على حفظ القرآن الكريم بالكامل من خلال التسجيل في دورة حفظ مكثفة , باتباع خطة منظمة وشخصية لتحقيق هذا الهدف النبيل.</p>
                         </details>
                     </div>
                 </div>
 
                 <div className="center flex items-center justify-between w-[80%]">
-                <div className="rounded-lg overflow-hidden  cursor-pointer shadow-lg">
+                    <div className="rounded-lg overflow-hidden  cursor-pointer shadow-lg">
                         <details className='w-[300px] rounded-lg'>
                             <summary className="bg-[--main-bgLight-color]  text-[--main-green-color] p-2 ">تعلم قواعد التجويد</summary>
-                            <p  className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
+                            <p className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
                         </details>
                     </div>
                     <img className="w-[150px]" src={center} alt="" />
                     <div className="rounded-lg overflow-hidden  cursor-pointer shadow-lg">
                         <details className='w-[300px] rounded-lg'>
                             <summary className="bg-[--main-bgLight-color]  text-[--main-green-color] p-2 ">تعلم قواعد التجويد</summary>
-                            <p  className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
+                            <p className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
                         </details>
                     </div>
                 </div>
 
                 <div className="bottom w-[60%] flex items-center justify-between ">
-                <div className="rounded-lg overflow-hidden  cursor-pointer shadow-lg">
+                    <div className="rounded-lg overflow-hidden  cursor-pointer shadow-lg">
                         <details className='w-[300px] rounded-lg'>
                             <summary className="bg-[--main-bgLight-color]  text-[--main-green-color] p-2 ">تعلم قواعد التجويد</summary>
-                            <p  className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
+                            <p className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
                         </details>
                     </div>
                     <div className="rounded-lg overflow-hidden cursor-pointer shadow-lg">
                         <details className='w-[300px] rounded-lg'>
                             <summary className="bg-[--main-bgLight-color]  text-[--main-green-color] p-2 ">تعلم قواعد التجويد</summary>
-                            <p  className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
+                            <p className="bg-[--main-green-color] text-[white] text-[--main-green-color]  p-2">سيتعلم الطلاب قواعد التجويد ، مما يضمن أن يكون حفظهم دقيقا وجميلا ويلتزم بالنطق الصحيح لكل حرف.</p>
                         </details>
                     </div>
                 </div>
@@ -150,7 +248,7 @@ const Courses = () => {
             <div className="levels bg-[--main-bgLight-color] p-20">
                 <h4 className="globalMain-header text-[36px]">مستويات تعلم الدروس عبر الانترنت </h4>
                 <div className="bigBox flex items-center justify-between gap-5 mt-10">
-                    {dataLevels.map((item , index) => (
+                    {dataLevels.map((item, index) => (
                         <div className="box flex items-center flex-col   " key={index}>
                             <img className="w-[170px] mb-[-50px]" src={item.img} alt="" />
                             <div className="text text-[white] text-center bg-[--main-green-color] p-5 rounded-lg shadow-lg">
@@ -163,10 +261,112 @@ const Courses = () => {
             </div>
 
 
-            <CoursesPage/>
+            <CoursesPage />
+
+            <div>
+                <h4 className="globalMain-header text-[30px] mb-2">
+                    ما هي الميزات التي تجعل الدورة الخاصة بنا مميزة
+                </h4>
+                <div className="p-20 flex items-center">
+
+                    <div className="w-1/2 space-y-4 p-6">
+                        {cardsData.map((card) => (
+                            <div
+                                key={card.id}
+                                className={`flex items-center p-4 rounded-lg shadow`}
+                                style={{ backgroundColor: card.bgColor }}
+                            >
+                                <img
+                                    src={card.imgSrc}
+                                    alt="Icon"
+                                    className="w-12 h-12 mx-2"
+                                />
+                                <div>
+                                    <h3 className="text-lg font-semibold text-[#157A67]">
+                                        {card.title}
+                                    </h3>
+                                    <p className="font-semibold">{card.text}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="w-1/2 flex justify-center">
+                        <img
+                            src="/path-to-your-image.jpg"
+                            alt="Special Feature"
+                            className="w-full max-w-md rounded-lg shadow"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            {/* ///////////////////// */}
+
+            <div className="p-10">
+                <h4 className="globalMain-header text-[30px] mb-12 text-center">
+                    ما هي الميزات التي تجعل دورتنا التعليمية مميزة
+                </h4>
+                <div className="flex flex-wrap -mx-4">
+                    {cardsData2.map((card) => (
+                        <div
+                            key={card.id}
+                            className="w-full sm:w-1/2 px-4 mb-6 flex"
+                        >
+                            <div
+                                className={`flex items-center p-4 rounded-lg shadow w-full`}
+                                style={{ backgroundColor: card.bgColor }}
+                            >
+                                <img
+                                    src={card.imgSrc}
+                                    alt="Icon"
+                                    className="w-12 h-12 mx-2"
+                                />
+                                <div>
+                                    <h3 className="text-lg font-semibold text-[#157A67]">
+                                        {card.title}
+                                    </h3>
+                                    <p className="text-gray-700">{card.text}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            {/* //////////// */}
+
+            <div className="flex flex-wrap md:flex-nowrap justify-between items-center bg-[#D6EBE1] p-16 rounded-lg shadow-lg">
+                {/* القسم الأيمن: النصوص والزر */}
+                <div className="flex flex-col justify-center items-center md:w-1/2 space-y-4">
+                    <h3 className="text-xl font-bold text-[#157A67]">
+                        شهادة إتمام الدورة التعليمية
+                    </h3>
+                    <p className=" leading-relaxed text-center text-lg font-bold">
+                        عند الانتهاء من الدورة، سيحصل الطلاب على شهادة إنجاز وسيتم تكريمهم
+                        باحتفال بتقدمهم في تعلم الدروس القرآنية الرئيسية. يمثل هذا الإنجاز خطوة
+                        مهمة في رحلتهم لفهم وحفظ القرآن.
+                    </p>
+                    <button className='globalButton '> إحجز نسخة تجريبية الآن </button>
+                       
+                    
+                </div>
+
+                {/* القسم الأيسر: صورة الشهادة */}
+                <div className="flex justify-center items-center md:w-1/2 mt-8 md:mt-0">
+                    <div className="bg-white rounded-lg shadow-md p-12 w-full max-w-sm">
+                        <p className="text-center text-[#157A67] font-semibold">صورة الشهادة</p>
+                    </div>
+                </div>
+            </div>
 
 
-            
+
+
+
+
+
+
+
 
 
 
