@@ -11,24 +11,17 @@ import PricingPage from './Pages/PricingPage';
 import EasySteps from './Components/EasySteps/EasySteps';
 import About from './Pages/About/About';
 import { ItsLibrary } from './Pages/ItsLibrary/ItsLibrary';
-
-
-
 import 'animate.css';
-
 // Swipper 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-<<<<<<< HEAD
 import SubscriptionForm from './Pages/SubscriptionForm';
 import CommonQuestions from './Pages/ComonQuestions';
-=======
 import Read from './Components/read/read';
 import Books from './Components/books/books';
 import Visible from './Components/Visible/Visible';
 import Voice from './Components/Itsvoice/voice';
->>>>>>> 22eae4eb33cce4e4dabf49d7f32a6c0d8d31024a
 
 
 
