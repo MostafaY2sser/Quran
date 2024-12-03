@@ -10,9 +10,9 @@ import EasySteps from "../Components/EasySteps/EasySteps";
 import { useNavigate } from 'react-router-dom';
 
 const PricingPage = () => {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
     const handleClick = () => {
-      navigate('/subsriptionform'); 
+        navigate('/subsriptionform');
     };
 
     const [activeTab, setActiveTab] = useState("30 دقيقة");
@@ -28,55 +28,60 @@ const PricingPage = () => {
     ];
     return (
         <>
-            <div className="flex items-between justify-start p-11 rounded-md my-4"
+            <div
+                className="flex flex-col md:flex-row items-center md:items-start justify-start p-6 md:p-11 rounded-md my-4"
                 style={{
-                    backgroundColor: 'var(--secound-bg-color )',
+                    backgroundColor: "var(--secound-bg-color)",
                 }}
             >
                 {/* القسم الأيمن */}
-                <div className="flex flex-col items-center pr-11">
+                <div className="flex flex-col items-center mb-6 md:mb-0 md:pr-11">
                     <img
                         src={SVG}
                         alt="التسعير"
-                        className="w-24 h-24 mb-4"
+                        className="w-16 h-16 md:w-24 md:h-24 mb-4"
                     />
-                    <h3 className="text-lg font-semibold mb-2"
+                    <h3
+                        className="text-base md:text-lg font-semibold mb-2"
                         style={{
-                            color: 'var(--main-dark-color)',
+                            color: "var(--main-dark-color)",
                         }}
-                    >التسعير</h3>
-                    <hr className="w-12 border-t-2 border-orange-400" />
+                    >
+                        التسعير
+                    </h3>
+                    <hr className="w-8 md:w-12 border-t-2 border-orange-400" />
                 </div>
 
                 {/* القسم الأيسر */}
-                <div className="text-right space-y-4 pr-28">
+                <div className="text-right space-y-4 md:pr-28">
                     <div className="flex items-start">
-                        <span className="text-black text-2xl font-bold">•</span>
-                        <p className="mr-3 text-gray-800 text-2xl">
+                        <span className="text-black text-xl md:text-2xl font-bold">•</span>
+                        <p className="mr-3 text-gray-800 text-sm md:text-xl">
                             يتم فرض الرسوم الشهرية على أساس شهري بالدولار الأمريكي.
                         </p>
                     </div>
                     <div className="flex items-start">
-                        <span className="text-black text-2xl font-bold">•</span>
-                        <p className="mr-3 text-gray-800 text-2xl ">
+                        <span className="text-black text-xl md:text-2xl font-bold">•</span>
+                        <p className="mr-3 text-gray-800 text-sm md:text-xl">
                             الرسوم المفروضة مقدما مع ضمان استرداد الأموال بالكامل.
                         </p>
                     </div>
                     <div className="flex items-start">
-                        <span className="text-black text-2xl font-bold">•</span>
-                        <p className="mr-3 text-gray-800 text-2xl">
+                        <span className="text-black text-xl md:text-2xl font-bold">•</span>
+                        <p className="mr-3 text-gray-800 text-sm md:text-xl">
                             إذا كنت تريد خطة مخصصة، فسنقوم بترتيبها إن شاء الله.
                         </p>
                     </div>
                     <div className="flex items-start">
-                        <span className="text-black text-2xl font-bold">•</span>
-                        <p className="mr-3 text-gray-800 text-2xl">
+                        <span className="text-black text-xl md:text-2xl font-bold">•</span>
+                        <p className="mr-3 text-gray-800 text-sm md:text-xl">
                             المدفوعات عن طريق الحساب المصرفي، أو PayPal أو بطاقة الخصم أو
                             الائتمان.
                         </p>
                     </div>
                 </div>
             </div>
+
             {/* ////////////////////////////// */}
             <Plan />
             {/* //////////////////////// */}
@@ -95,7 +100,7 @@ const PricingPage = () => {
                     تحويل العملات
                 </h2>
                 <hr className="w-16 mx-auto border-t-2 border-orange-400 mb-6" />
-                <p className="text-gray-700 mb-8">
+                <p className="text-gray-700 mb-8 text-sm md:text-xl">
                     إذا كنت لا تدفع بالدولار الأمريكي، فيمكنك استخدام محول العملات التالي
                     لحساب قيمة التسعير مقابل عملتك.
                 </p>
@@ -229,7 +234,7 @@ const PricingPage = () => {
                 <button
                     type="button"
                     className="bg-[#0F8A73] text-white py-3 px-8 border-2 rounded-xl border-[#F0AD4E]"
-                    onClick={handleClick} 
+                    onClick={handleClick}
                 >
                     جميع خطط التسعير
                 </button>

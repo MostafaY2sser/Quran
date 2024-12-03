@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react'; 
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
 import design1 from "../assets/images/general/design1.png"
 import design2 from "../assets/images/general/design2.png"
 import EgazatSection from '../Components/Egazat/EgazatSection';
+import disLike from '../assets/images/general/disLike.png'
 
 
 const cardsData = [
@@ -54,7 +54,6 @@ const cardsData = [
       },
     ],
   },
-  // أضف باقي البيانات للكروت...
   {
     title: 'قراءة ابن عامر',
     buttons: [
@@ -70,7 +69,7 @@ const cardsData = [
       },
     ],
   },
-  // أضف باقي البيانات للكروت...
+
   {
     title: 'قراءة عاصم',
     buttons: [
@@ -86,7 +85,7 @@ const cardsData = [
       },
     ],
   },
-  // أضف باقي البيانات للكروت...
+
   {
     title: 'قراءة حمزة',
     buttons: [
@@ -102,7 +101,7 @@ const cardsData = [
       },
     ],
   },
-  // أضف باقي البيانات للكروت...
+
   {
     title: 'قراءة الكسائي',
     buttons: [
@@ -118,7 +117,7 @@ const cardsData = [
       },
     ],
   },
-  // أضف باقي البيانات للكروت...
+
   {
     title: 'قراءة يعقوب',
     buttons: [
@@ -134,7 +133,7 @@ const cardsData = [
       },
     ],
   },
-  // أضف باقي البيانات للكروت...
+
   {
     title: 'قراءة خلف',
     buttons: [
@@ -150,7 +149,7 @@ const cardsData = [
       },
     ],
   },
-  // أضف باقي البيانات للكروت...
+
   {
     title: 'قراءة ابي جعفر',
     buttons: [
@@ -166,13 +165,13 @@ const cardsData = [
       },
     ],
   },
-  // أضف باقي البيانات للكروت...
+
 
 ];
 
 export default function EgazatPage() {
-  
-  const [searchTerm, setSearchTerm] = useState(''); // تعريف المتغير searchTerm باستخدام useState
+
+  const [searchTerm, setSearchTerm] = useState(''); 
   const navigate = useNavigate();
 
   const handleNavigate = (card, button) => {
@@ -192,8 +191,8 @@ export default function EgazatPage() {
   return (
     <>
       <div className="flex flex-col justify-start items-center mt-11 relative" style={{ backgroundColor: 'var(--body-bg-color)', direction: 'rtl' }}>
-        <img src={design1} alt='design1'className="absolute right-0 top-0 "  />
-        <img src={design2} alt='design2'className="absolute left-0 bottom-[40px] w-56 "  />
+        <img src={design1} alt='design1' className="absolute right-0 top-0 " />
+        <img src={design2} alt='design2' className="absolute left-0 bottom-[40px] w-56 " />
         <div
           className="flex items-center justify-end w-full mb-8 relative"
           style={{ direction: 'rtl' }}
@@ -213,7 +212,7 @@ export default function EgazatPage() {
             className="absolute text-green-700 left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-11 gap-y-11 my-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-11 gap-y-11 my-8 ">
           {cardsData
             .filter((card) =>
               card.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -221,10 +220,10 @@ export default function EgazatPage() {
             .map((card, index) => (
               <div
                 key={index}
-                className="p-8 w-72 h-64 rounded-lg shadow-lg border border-green-300"
+                className="p-8 w-72 h-64 rounded-lg shadow-lg border border-green-300 relative"
                 style={{
                   backgroundColor: 'var(--main-bgLight-color)',
-                  borderColor: 'var(--main-dark-color)', 
+                  borderColor: 'var(--main-dark-color)',
                 }}
               >
                 <h3 className="mb-11 text-lg font-bold text-black text-center">{card.title}</h3>
@@ -234,13 +233,19 @@ export default function EgazatPage() {
                       key={idx}
                       className="globalButton"
                       onClick={() => handleNavigate(card, button)}
-                      style={{ width: '200px', padding: '10px 0px', }}
+                      style={{ width: '200px', padding: '10px 0px' }}
                     >
                       {button.name}
                     </button>
                   ))}
+                  <img
+                    className="absolute top-4 left-5 cursor-pointer w-6"
+                    src={disLike}
+                    alt=""
+                  />
                 </div>
               </div>
+
             ))}
         </div>
         <EgazatSection />
