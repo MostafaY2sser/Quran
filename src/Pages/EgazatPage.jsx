@@ -171,6 +171,7 @@ const cardsData = [
 ];
 
 export default function EgazatPage() {
+  
   const [searchTerm, setSearchTerm] = useState(''); // تعريف المتغير searchTerm باستخدام useState
   const navigate = useNavigate();
 

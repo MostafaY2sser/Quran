@@ -3,6 +3,7 @@
 import Amr from '../../Components/Amr/Amr'
 import BlogsSection from '../../Components/BlogsSection/BlogsSection'
 import CoursesSection from '../../Components/CoursesSection/CoursesSection'
+import EgazatSection from '../../Components/Egazat/EgazatSection'
 import HeroHome from '../../Components/HeroHome/HeroHome'
 import Numbers from '../../Components/Numbers/Numbers'
 import Opinions from '../../Components/Opinions/Opinions'
@@ -27,6 +28,7 @@ const Home = () => {
             <Numbers/>
             <CoursesSection/>
             <Opinions/>
+            <EgazatSection/>
             <BlogsSection/>
         </div>
     )

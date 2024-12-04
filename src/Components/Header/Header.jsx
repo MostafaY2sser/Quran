@@ -1,4 +1,3 @@
-
 import facebook from "../../assets/images/iconHeader/facebook.png"
 import whatsap from "../../assets/images/iconHeader/whatsap.png"
 import youtube from "../../assets/images/iconHeader/youtube.png"
@@ -9,7 +8,11 @@ import cart from "../../assets/images/iconHeader/cart.png"
 import './header.css'
 import { Link, NavLink } from "react-router-dom"
 
+
+
 const Header = () => {
+
+
 
     return (
         <div className="headers">
@@ -32,23 +35,27 @@ const Header = () => {
                 <div className="links flex items-center justify  gap-6 ">
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/">الرئيسية</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/egazatpage">الإجازات</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/qurancourse">الكورسات</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/coursesPage">الكورسات</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/pricingpage">الأسعار</NavLink>
+                    {/* <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/library">المكتبة</NavLink> */}
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/ItsLibrary">المكتبة</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/sheikhs">الشيوخ</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/elsheikhs">الشيوخ</NavLink>
+                    {/* <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/sheikhs">الشيوخ</NavLink> */}
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/blogs">المدونات</NavLink>
-
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/commonQuestions">الأسئلة الشائعة</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/more">المزيد</NavLink>
-
+                    {/* <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/more">المزيد</NavLink> */}
                     {/* <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/faq">الأسئلة الشائعة</NavLink> */}
-                    {/* <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/about">المزيد</NavLink> */}
-
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/about">المزيد</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/more">المزيد</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/contact">تواصل معنا</NavLink>
                 </div>
                 <div className="left flex items-center gap-5">
-                    <img src={wish} alt="wish" />
-                    <img src={cart} alt="shopping cart" />
+                    <Link to='/wishList'>
+                        <img src={wish} alt="wish" />
+                    </Link>
+                    <Link to="/shoppingCart">
+                        <img  src={cart} alt="shopping-cart" />
+                    </Link>
                     <div className="flex  items-center gap-2">
                         <img src={eng} alt="english" />
                         <span>Englash</span>
