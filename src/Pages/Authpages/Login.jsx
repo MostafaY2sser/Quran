@@ -118,7 +118,7 @@
             <Link to='/login' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">تسجيل الدخول</Link>
             <Link to='/About' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">من نحن</Link>
             <Link to='/Joinus' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">انضم الينا كمعلم</Link>
-            <Link to='/' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">التقييمات</Link>
+            <Link to='/Ratings' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">التقييمات</Link>
             </div>
         </nav>
         {/* Decorative Images */}
@@ -127,14 +127,14 @@
         </div>
 
         {/* Main Content */}
-        <div className='flex flex-col md:flex-row-reverse justify-center gap-0 px-4 py-8 md:py-16'>
+        <div className='flex flex-col md:flex-row-reverse justify-center  px-4 py-8 md:py-16'>
             {/* Login Form */}
-            <div className="w-full   flex items-center justify-center bg-[--main-green-color] rounded-lg max-w-md mb-8 md:mb-0 md:mr-8">
+            <div className="w-full   flex items-center justify-center bg-[--main-green-color] rounded-lg max-w-md mb-8 md:mb-0">
             <div className="   h-[500px]  mt-[100px] sm:p-8 rounded-lg text-white justify-center text-center ">
                 <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">تسجيل الدخول إلى حسابك</h2>
                 <Link to='/regester' className="text-sm mb-6 sm:mb-8 ">ليس لديك حساب ؟ قم بتسجيل الدخول مجانا</Link>
                 
-                <form className="space-y-4 sm:space-y-6 bg-[--main-green-color]  ">
+                <form className="space-y-4 sm:space-y-6 bg-[--main-green-color] ">
                 <input 
                     type="email"
                     className="mt-[10px] w-full px-3 py-2 bg-[--main-bgLight-color] rounded-md text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-[--main-border-color]"
