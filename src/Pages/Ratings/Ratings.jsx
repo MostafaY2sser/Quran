@@ -3,6 +3,7 @@
 import { Rating } from '@mui/material'
 import person from '../../assets/images/home/person.png'
 import EgazatSection from '../../Components/Egazat/EgazatSection'
+import { Link } from 'react-router-dom'
 
 
 const Ratings = () => {
@@ -49,7 +50,14 @@ const Ratings = () => {
 
     return (
         <div>
-
+            <nav className="p-6 m-10 bg-[--main-bgLight-color] h-[159px] top-[301px]">
+            <div className="flex gap-[24px] items-center justify-center h-[100px] top-[330px] left-[91] ">
+            <Link to='/login' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">تسجيل الدخول</Link>
+            <Link to='/About' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">من نحن</Link>
+            <Link to='/Joinus' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">انضم الينا كمعلم</Link>
+            <Link to='/Ratings' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">التقييمات</Link>
+            </div>
+        </nav>
             <div className='mt-20 mb-10'>
                 <h4 className='globalMain-header text-[40px]'>آراء أولياء الامور والطلاب </h4>
                 <div className="bigBox flex flex-col gap-5 mt-10 ">
