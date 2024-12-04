@@ -21,9 +21,9 @@ const Amr = () => {
                         <button className="globalButton bg-[--main-bgLight-color] text-[black] text-[20px] font-[700]">شاهد الفيديو المجانى</button>
                     </div>
                 </div>
-                <img className='w-2/3' src={lab} alt="" />
+                <img className='amrImg w-2/3' src={lab} alt="" />
             </div>
-            <img className='absolute bottom-[-50px] left-[52%] w-[200px]' src={arrow} alt="" />
+            <img className='arrow absolute bottom-[-50px] left-[52%] w-[200px]' src={arrow} alt="" />
         </div>
     )
 }

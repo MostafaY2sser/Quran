@@ -15,6 +15,7 @@ import Container_1 from '../../assets/images/courses/Container_1 .png'
 import Container_2 from '../../assets/images/courses/Container_2 .png'
 import Container_3 from '../../assets/images/courses/Container_3.png'
 import Container_4 from '../../assets/images/courses/Container_4.png'
+import pepole from '../../assets/images/general/people.png'
 
 
 
@@ -131,6 +132,69 @@ const Courses = () => {
 
         },
     ];
+
+
+    const dataWhy = [ 
+        {text : "أفضل طرق التدريس" , pargraph : "مصطفي ياسر حمدي"} ,
+        {text : "شهادات إتمام الدورة" , pargraph : "مصطفي ياسر حمدي"} ,
+        {text : "المسابقات والاختبارات" , pargraph : "مصطفي ياسر حمدي"} ,
+        {text : "خطط رسوم ميسورة التكلفة" , pargraph : "مصطفي ياسر حمدي"} ,
+        {text : "24/7 التوفر" , pargraph : "مصطفي ياسر حمدي"} ,
+        {text : "فصول تجريبية مجانية" , pargraph : "مصطفي ياسر حمدي"} ,
+    ]
+
+
+    const dataQuestion = [
+        { question : "ما الذي يميز معلمي القرآن الخاصين عن غيرهم؟" , ansswer : "مصطفي سار حمدي" },
+        { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
+        { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
+        { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
+        { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
+    ]
+
+
+    const dataSlider = [
+        {
+            img : pepole,
+            name : "مصطفي ياسر",
+            ex : 4 ,
+            rate : 2 ,
+            course : "القرآن واللغة العربية والدراسات الإسلامية",
+            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+        },
+        {
+            img : pepole,
+            name : "عبد الرحمن",
+            ex : 4 ,
+            rate : 2 ,
+            course : "القرآن واللغة العربية والدراسات الإسلامية",
+            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+        },
+        {
+            img : pepole,
+            name : "احمد",
+            ex : 4 ,
+            rate : 2 ,
+            course : "القرآن واللغة العربية والدراسات الإسلامية",
+            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+        },
+        {
+            img : pepole,
+            name : "عمر",
+            ex : 4 ,
+            rate : 2 ,
+            course : "القرآن واللغة العربية والدراسات الإسلامية",
+            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+        },
+        {
+            img : pepole,
+            name : "جمال",
+            ex : 4 ,
+            rate : 2 ,
+            course : "القرآن واللغة العربية والدراسات الإسلامية",
+            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+        },
+    ]
 
 
     return (
@@ -335,6 +399,8 @@ const Courses = () => {
             </div>
             {/* //////////// */}
 
+
+
             <div className="flex flex-wrap md:flex-nowrap justify-between items-center bg-[#D6EBE1] p-16 rounded-lg shadow-lg">
                 {/* القسم الأيمن: النصوص والزر */}
                 <div className="flex flex-col justify-center items-center md:w-1/2 space-y-4">
@@ -362,12 +428,50 @@ const Courses = () => {
 
 
 
+            <div className="whyChose mt-20">
+                <h4 className="text-[--main-green-color] text-[30px] font-[700] text-center pb-5">لماذا تختار موقع ......</h4>
+                <hr  className='border-0 h-[2px] bg-[--main-border-color] w-[20%] ml-[auto] mr-[auto] '/>
+
+                <div className="content flex  justify-around mt-10">
+                    <div className="text">
+                        { dataWhy.map((item , index) => (
+                            <details key={index}>
+                                <summary className="w-[300px] p-2 mb-3 rounded-md text-[18px] font-[600] shadow-lg cursor-pointer bg-[--main-bgLight-color] text-[--main-green-color] border-[1px] border-[--main-border-color] border-r-[7px] border-r-[--main-border-color]">
+                                    {item.text}
+                                </summary>
+                                <p className="bg-[--main-bgLight-color] rounded-md p-5  mb-3">{item.pargraph}</p>
+                            </details>
+                        )) }
+                    </div>
+                    <div className="image bg-[#333] w-[30%] h-[350px] rounded-md overflow-hidden">
+                        <img className="w-full h-full" src={pepole} alt="" />
+                    </div>
+                </div>
+
+            </div>
 
 
+            <div className="repeatQuestion flex items-center justify-around mt-20">
+                <h4 className="text-[32px] font-[700] text-[--main-green-color] border-b-2 border-[--main-border-color] ">أهم الأسئلة الشائعة؟</h4>
+                <div className="question rounded-md ">
+                    { dataQuestion.map((item , index) =>(
+                        <details key={index}>
+                            <summary className="w-[400px] p-4   text-[16px] font-[400] shadow-lg cursor-pointer bg-[--main-bgLight-color]  border-b-[1px] border-b-[--main-green-color]">{item.question}</summary>
+                            <p className="bg-[--main-bgLight-color] rounded-md p-5  mb-3">{item.ansswer}</p>
+                        </details>
+                    )) }
+                </div>
+            </div>
 
 
-
-
+            {/* <div className="teachers mt-20">
+                <h4 className="globalMain-header">المعلمون المصريون المعتمدون</h4>
+                <div className="slider">
+                    {dataSlider.map((item , index)=> (
+                        <div className="box" key></div>
+                    ))}
+                </div>
+            </div> */}
 
 
 
