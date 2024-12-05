@@ -1,7 +1,20 @@
 
-.amr .info{
-    /* background-color: var(--main-dark-color); */
-    /* border-radius: var(--md-border); */
-    /* border: 2px solid var(--main-border-color ); */
-    /* color: white; */
+@media ( max-width : 992px ) {
+    .amr .arrow{
+        display: none;
+    }
+    .amr .amrImg{
+        display: none;
+    }
+    .amr .info{
+        width : 100% ;
+    }
+}
+@media ( max-width : 480px ) {
+    .groupButton button{
+        font-size: 18px;
+    }
+    .amr .info h4{
+        margin: 10px 0 ;
+    }
 }

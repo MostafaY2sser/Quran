@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import ReactHowler from "react-howler";
+// import ReactHowler from "react-howler";
 
 
 const Voice = () => {
