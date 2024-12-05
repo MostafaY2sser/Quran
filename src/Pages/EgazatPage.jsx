@@ -195,18 +195,19 @@ export default function EgazatPage() {
         <img src={design1} alt="design1" className="absolute right-0 top-0 w-20 sm:w-28 lg:w-auto" />
         <img src={design2} alt="design2" className="absolute left-0 bottom-[40px] w-28 sm:w-40 lg:w-56" />
   
-        <div className="flex justify-end my-6 lg:my-10">
-        <div className="w-full lg:w-[30%] border-2 border-[--main-dark-color] rounded-[10px] overflow-hidden py-2 px-3 flex items-center gap-3">
-          <FontAwesomeIcon className="text-[--main-dark-color]" icon={faSearch} />
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            placeholder="اكتب اسم القراءة"
-            className="w-full bg-transparent border-none outline-none"
-          />
-        </div>
+    {/* Search Bar */}
+    <div className="flex justify-end my-6 lg:my-10">
+      <div className=" sm:w-[20%] md:w-[50%] lg:w-[30%] border-2 border-[--main-dark-color] rounded-[10px] overflow-hidden py-2 px-3 sm:py-1 sm:px-2 flex items-center gap-3">
+        <FontAwesomeIcon className="text-[--main-dark-color]" icon={faSearch} />
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="اكتب اسم القراءة"
+          className="w-full bg-transparent border-none outline-none text-sm sm:text-base"
+        />
       </div>
+    </div>
 
   
         {/* Cards Section */}

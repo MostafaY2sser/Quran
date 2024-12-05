@@ -36,16 +36,16 @@ const CommonQuestions = () => {
                     {/* أيقونة علامة الاستفهام */}
                     <FontAwesomeIcon
                         icon={faQuestionCircle}
-                        className="text-[#CBEDD5] bg-[#0F8A73] rounded-full text-6xl transform scale-x-[-1]" 
+                        className="text-[#CBEDD5] bg-[#0F8A73] rounded-full text-6xl transform scale-x-[-1]"
                     />
                     {/* العنوان */}
-                    <h2 className="text-lg font-bold mt-2">الأسئلة الشائعة</h2>
+                    <h2 className="text-xl sm:text-lg font-bold mt-2">الأسئلة الشائعة</h2>
                     {/* خط تحت العنوان */}
                     <hr className="w-16 border-[#F0AD4E] mt-1" />
                 </div>
 
                 {/* النص الجانبي */}
-                <div className="text-right text-[#0F8A73] font-bold text-2xl flex-1 mr-4 mb-[20px]">
+                <div className="text-right text-[#0F8A73] text-base sm:text-lg lg:text-xl flex-1 mr-4 mb-[20px]">
                     <p>
                         فيما يلي بعض الأسئلة الشائعة حول القرآن الكريم والدراسات العربية والإسلامية عبر الإنترنت.
                     </p>
@@ -53,28 +53,25 @@ const CommonQuestions = () => {
             </div>
             {/* ///////// */}
             <div className="max-w-4xl mx-auto p-4 bg-gray-50">
-                <h1 className="text-xl font-bold text-right mb-4 text-[#0F8A73] ">أسئلة عامة</h1>
+                <h1 className="text-lg sm:text-xl font-bold text-right mb-4 text-[#0F8A73] ">أسئلة عامة</h1>
                 <div className="border border-[#0F8A73] rounded-2xl overflow-hidden ">
                     {questions.map((item, index) => (
-                        <div
-                            key={index}
-                            className="overflow-hidden "
-                        >
+                        <div key={index} className="overflow-hidden">
                             <button
                                 onClick={() => handleToggle(index)}
-                                className="flex justify-between items-center w-full p-4 bg-[#CBEDD5]  text-right text-xl "
+                                className="flex justify-between items-center w-full p-3 sm:p-4 bg-[#CBEDD5] text-right text-base sm:text-lg lg:text-xl"
                             >
-                                <span className="bg-[#CBEDD5]">{item.question}</span>
+                                <span>{item.question}</span>
                                 <span>
                                     {activeIndex === index ? (
-                                        <FontAwesomeIcon icon={faCaretUp} /> 
+                                        <FontAwesomeIcon icon={faCaretUp} />
                                     ) : (
-                                        <FontAwesomeIcon icon={faCaretDown} /> 
+                                        <FontAwesomeIcon icon={faCaretDown} />
                                     )}
                                 </span>
                             </button>
                             {activeIndex === index && (
-                                <div className="p-4 bg-[#0F8A73] text-right text-[#FFFFFF] text-xl">
+                                <div className="p-3 sm:p-4 bg-[#0F8A73] text-right text-[#FFFFFF] text-base sm:text-lg lg:text-xl">
                                     {item.answer}
                                 </div>
                             )}

@@ -86,13 +86,13 @@ const PricingPage = () => {
             <Plan />
             {/* //////////////////////// */}
             <div
-                className="text-center py-16 "
+                className="text-center py-8 px-4 md:py-16"
                 style={{
-                    backgroundColor: "var( --body-bg-color)",
+                    backgroundColor: "var(--body-bg-color)",
                 }}
             >
                 <h2
-                    className="text-2xl font-bold mb-4"
+                    className="text-xl md:text-2xl font-bold mb-4"
                     style={{
                         color: "var(--main-dark-color)",
                     }}
@@ -100,48 +100,53 @@ const PricingPage = () => {
                     تحويل العملات
                 </h2>
                 <hr className="w-16 mx-auto border-t-2 border-orange-400 mb-6" />
-                <p className="text-gray-700 mb-8 text-sm md:text-xl">
+                <p className="text-gray-700 mb-6 text-sm md:text-base lg:text-lg">
                     إذا كنت لا تدفع بالدولار الأمريكي، فيمكنك استخدام محول العملات التالي
                     لحساب قيمة التسعير مقابل عملتك.
                 </p>
-                <div className="flex justify-center items-center space-x-8 gap-36">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-16">
                     <img
                         src={image1}
                         alt="محول العملات"
-                        className="w-72 h-64 rounded-md "
+                        className="w-60 h-48 md:w-72 md:h-64 rounded-md"
                     />
                     <img
                         src={image2}
                         alt="وسائل الدفع"
-                        className="w-48 h-72 rounded-md "
+                        className="w-40 h-60 md:w-48 md:h-72 rounded-md"
                     />
                 </div>
             </div>
+
             <div className="p-8 ">
                 {/* عنوان الصفحة */}
                 <h2 className="text-center text-2xl font-bold mb-4 text-green-800">فئات خطط التسعير</h2>
                 <hr className="w-16 mx-auto border-t-2 border-orange-400 mb-8" />
 
                 {/* الألسنة (Tabs) */}
-                <div className="flex justify-center mb-8 border "
+                <div
+                    className="mb-8 w-full"
                     style={{
-                        borderColor: 'var(--main-dark-color)',
+                        borderColor: "var(--main-dark-color)",
                     }}
                 >
-                    {["30 دقيقة", "45 دقيقة", "60 دقيقة", "الجروب"].map((tab) => (
-                        <button
-                            key={tab}
-                            onClick={() => setActiveTab(tab)}
-                            style={{
-                                backgroundColor: activeTab === tab ? 'var(--secound-bg-color )' : "var( --main-dark-color)",
-                                color: activeTab === tab ? "var(--main-dark-color)" : "white",
-                            }}
-                            className="px-20 py-2 text-white font-semibold w-1/4"
-                        >
-                            {tab}
-                        </button>
-                    ))}
+                    <div className="flex justify-center w-full ">
+                        {["30 دقيقة", "45 دقيقة", "60 دقيقة", "الجروب"].map((tab,index) => (
+                            <button
+                                key={index}
+                                onClick={() => setActiveTab(tab)}
+                                style={{
+                                    backgroundColor: activeTab === tab ? "var(--secound-bg-color)" : "var(--main-dark-color)",
+                                    color: activeTab === tab ? "var(--main-dark-color)" : "white",
+                                }}
+                                className="px-8 sm:px-10 lg:px-16 py-2 text-white font-semibold w-auto flex-grow sm:flex-grow-0"
+                            >
+                                {tab}
+                            </button>
+                        ))}
+                    </div>
                 </div>
+
 
                 {/* البطاقات */}
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 py-16 border rounded-2xl px-6 "
