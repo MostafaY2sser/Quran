@@ -1,6 +1,6 @@
 
 
-// import React from 'react'
+import './opinions.css'
 import { Rating } from '@mui/material'
 import person from '../../assets/images/home/person.png'
 
@@ -34,7 +34,7 @@ const Opinions = () => {
         {
             img :person ,
             name : "عمر",
-            comment : "الكورس فاجر",
+            comment : "الكورس  فاجر",
             rating : 4 ,
             date : "12/11/2024",
             time: "12:25 pm"
@@ -44,25 +44,25 @@ const Opinions = () => {
 
 
     return (
-        <div className='mt-20 mb-10'>
-            <h4 className='globalMain-header text-[40px]'>آراء أولياء الامور والطلاب </h4>
+        <div className='opinions mt-20 mb-10'>
+            <h4 className='globalMain-header title text-[40px]'>آراء أولياء الامور والطلاب </h4>
             <div className="bigBox flex flex-col gap-5 mt-10 ">
                 { data.map((item , index)=> (
                     <div className="box p-10  shadow-lg  rounded-[10px] bg-[--main-bgLight-color] flex items-center w-[100%]" key={index}>
-                        <img className='w-[150px] h-[150px] rounded-[50%] ml-10' src={item.img} alt="" />
+                        <img className='opinionsImg w-[150px] h-[150px] rounded-[50%] ml-10' src={item.img} alt="" />
                         <div>
                             <h6 className='font-[700] text-[34px]'>{item.name}</h6>
-                            <p className=' text-[24px]'>{item.comment}</p>
+                            <p className='comment text-[24px]'>{item.comment}</p>
                         </div>
-                        <div className="rating  flex flex-1 gap-10 flex-col items-end  ">
+                        <div className="rating  flex flex-1 gap-10 flex-col items-end justify-between  ">
                             <Rating name="read-only" value={item.rating} readOnly />
                             <div className="date flex items-center gap-7 ">
                                 <div>
-                                    <span  className='text-[20px]'>التاريخ/ </span>
+                                    <span  className='text-[20px]'> </span>
                                     <span>{item.date}</span>
                                 </div>
                                 <div>
-                                    <span className='text-[20px]'>اليوم/ </span>
+                                    <span className='text-[20px]'> </span>
                                     <span>{item.time}</span>
                                 </div>
                             </div>

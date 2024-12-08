@@ -1,5 +1,6 @@
 
-// import React from 'react'
+
+import './blogsSection.css'
 import blog_1 from '../../assets/images/home/blog_1.png'
 import blog_2 from '../../assets/images/home/blog_2.png'
 
@@ -21,7 +22,7 @@ const BlogsSection = () => {
 
 
     return (
-        <div className='my-[80px]'>
+        <div className='blogsSection my-[80px]'>
             <h4 className='globalMain-header mb-[40px] text-[40px]'>المدونات</h4>
             <div className="bigBox flex justify-center gap-[50px]">
                 { data.map((item , index)=> (

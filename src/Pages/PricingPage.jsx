@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SVG from "../assets/images/prices/SVG.png"
 import image1 from "../assets/images/prices/image1.png"
 import image2 from "../assets/images/prices/image2.png"
@@ -26,6 +26,7 @@ const PricingPage = () => {
         { id: 5, days: "5 يوم / أسبوع", price: "35$", oldPrice: "40$", details: "4 دروس / شهر " },
         { id: 6, days: "6 يوم / أسبوع", price: "20$", oldPrice: "40$", details: "4 دروس / شهر " },
     ];
+
     return (
         <>
             <div
@@ -128,7 +129,7 @@ const PricingPage = () => {
                         borderColor: 'var(--main-dark-color)',
                     }}
                 >
-                    {["30 دقيقة", "45 دقيقة", "60 دقيقة", "الجروب"].map((tab) => (
+                    {["30 دقيقة" , "45 دقيقة", "60 دقيقة", "الجروب"].map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}

@@ -1,7 +1,7 @@
 import 'animate.css';
 import arrow from '../../assets/images/general/arrow.png';
 import planImg from '../../assets/images/general/planImg.png'
-// import './plan.css';
+import './plan.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,16 +12,16 @@ const Plan = () => {
 
 
     return (
-      <div className="py-10 flex justify-between items-center flex-col  bg-[--main-bgLight-color] ">
+      <div className="planBg py-10 flex justify-between items-center flex-col  bg-[--main-bgLight-color] ">
 
         <div className="head mb-7">
             <h3 className="globalMain-header text-sm md:text-xl">أختر خطة الدراسة الخاصة بك</h3>
         </div>
 
-        <div className="flex flex-col gap-y-4 sm:flex-row gap-36 justify-between items-center">
+        <div className="boxPlan flex flex-col gap-y-4 sm:flex-row gap-36 justify-between items-center">
 
-        <div className=''>
-                    <img className='w-28 md:w-52' src={planImg} alt="" />
+        <div className='planBox'>
+                    <img className='planBG w-28 md:w-52' src={planImg} alt="" />
         </div>
         <div className='flex flex-col gap-2 items-start justify-start'>
 
