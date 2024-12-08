@@ -1,3 +1,6 @@
+
+// eslint-disable-next-line no-undef
+const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 export default {
   
@@ -8,6 +11,18 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none', /* IE 10+ */
+          'scrollbar-width': 'none', /* Firefox */
+        },
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none', /* WebKit */
+        },
+      });
+    }),
+  ],
 }
 

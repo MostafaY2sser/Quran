@@ -3,6 +3,9 @@
 import { useNavigate } from 'react-router-dom';
 import imgcourse from '../../assets/images/general/course.png'
 import EasySteps from './../../Components/EasySteps/EasySteps';
+import './coursesPage.css'
+
+
 
 const CoursesPage = () => {
 
@@ -40,47 +43,47 @@ const CoursesPage = () => {
 
 
     return (
-        <div className="my-20">
-            <h4 className='globalMain-header text-[40px] mb-10'>دوراتنا عبر الانترنت</h4>
+        <div className="coursesPage  my-20">
+            <h4 className='globalMain-header  mainTitle text-[40px] mb-10'>دوراتنا عبر الانترنت</h4>
 
         <div className="quranCoursse p-10 pt-20 rounded-lg shadow-lg mb-10 flex items-center justify-evenly bg-[--main-bgLight-color] border-[1px] border-[--main-border-color] relative">
-            <h4 className="text-[--main-green-color] text-[34px] font-[700] absolute top-5 right-10">دروس القرآن</h4>
+            <h4 className="subTitle text-[--main-green-color] text-[34px] font-[700] absolute top-5 right-10">دروس القرآن</h4>
             <div className="buttons flex flex-wrap gap-10">
                 {quranCourses.map((item , index) => (
                     <button key={index} onClick={()=> navigate('/qurancourse')} className="globalButton w-[45%]">{item.text}</button>
                 ))}
             </div>
             <div className="image w-[40%]">
-                <img className='' src={imgcourse} alt="" />
+                <img className='imgCourse' src={imgcourse} alt="" />
             </div>
         </div>
 
 
 
 
-        <div className="quranCoursse p-10 rounded-lg shadow-lg mb-10 flex items-center justify-evenly bg-[--main-bgLight-color] border-[1px] border-[--main-border-color] relative">
-            <h4 className="text-[--main-green-color] text-[34px] font-[700] absolute top-5 right-10">دروس اللغة العربية</h4>
-            <div className="buttons flex flex-wrap gap-10">
+        <div className="quranCoursse p-10 pt-20  rounded-lg shadow-lg mb-10 flex items-center justify-evenly bg-[--main-bgLight-color] border-[1px] border-[--main-border-color] relative">
+            <h4 className="subTitle text-[--main-green-color] text-[34px] font-[700] absolute top-5 right-10">دروس اللغة العربية</h4>
+            <div className="buttons flex flex-wrap gap-10 flex-1">
                 {languageCourses.map((item , index) => (
                     <button key={index} onClick={()=> navigate('/qurancourse')} className="globalButton w-[45%]">{item.text}</button>
                 ))}
             </div>
             <div className="image w-[40%]">
-                <img className='' src={imgcourse} alt="" />
+                <img className='imgCourse' src={imgcourse} alt="" />
             </div>
         </div>
 
 
 
-        <div className="quranCoursse p-10 rounded-lg shadow-lg mb-10 flex items-center justify-evenly bg-[--main-bgLight-color] border-[1px] border-[--main-border-color] relative">
-            <h4 className="text-[--main-green-color] text-[34px] font-[700] absolute top-5 right-10">دروس  إسلامية</h4>
+        <div className="quranCoursse p-10 pt-20  rounded-lg shadow-lg mb-10 flex items-center justify-evenly bg-[--main-bgLight-color] border-[1px] border-[--main-border-color] relative">
+            <h4 className="subTitle text-[--main-green-color] text-[34px] font-[700] absolute top-5 right-10">دروس  إسلامية</h4>
             <div className="buttons flex flex-wrap gap-10">
                 {eslamCourses.map((item , index) => (
                     <button key={index} onClick={()=> navigate('/qurancourse')}   className="globalButton w-[45%]">{item.text}</button>
                 ))}
             </div>
             <div className="image w-[40%]">
-                <img className='' src={imgcourse} alt="" />
+                <img className='imgCourse' src={imgcourse} alt="" />
             </div>
         </div>
 

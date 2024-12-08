@@ -1,3 +1,7 @@
+
+
+
+
 import './App.css'
 import Footer from './Components/Footer/Footer'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -35,6 +39,7 @@ import ProfileTecher from './Pages/ProfileTecher/ProfileTecher';
 import Ratings from './Pages/Ratings/Ratings';
 import CoursesPage from './Pages/CoursesPage/CoursesPage';
 import ViewBook from './Components/ViewBook/ViewBook';
+import Joinus from './Pages/Joinus';
 
 
 
@@ -43,7 +48,6 @@ function App() {
 
   return (
     <div className="app">
-
       <div className="appContainer">
         <Router>
           {/* <Header /> */}
@@ -76,6 +80,11 @@ function App() {
             <Route path="/coursesPage" element={<CoursesPage/>} />
             <Route path="/qurancourse" element={<Courses/>} />
 
+            {/* <Route path='/login'  element={<Login/>}/>
+            <Route path='/Regester' element={<Regester/>}/>
+            <Route path= '/newpass' element={<Newpass/>}/>
+            <Route path='/contact'  element={<Contact/>}/> */}
+            <Route path='/joinus'  element={<Joinus/>}/>
           </Routes>
           <Footer />
         </Router>

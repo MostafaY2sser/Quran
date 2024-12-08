@@ -27,20 +27,20 @@ const Header = () => {
 
     return (
         <div className="headers">
-            <div className="topHeader flex items-center gap-5 justify-end mt-4">
-                <div className="icons flex items-center gap-3">
+            <div className="topHeader flex items-center gap-2 md:gap-5 justify-end mt-2 md:mt-4">
+                <div className="icons flex items-center gap-1 md:gap-3">
                     <img src={youtube} alt="youtube" />
                     <img src={facebook} alt="facebook" />
                     <img src={whatsap} alt="whatsap" />
                 </div>
                 <Link to="/TrialSession">
-                    <button className="globalButton">حجز حصة تجريبية</button>
+                    <button className="globalButton px-[10px] py-[8px]">حجز حصة تجريبية</button>
                 </Link>
             </div>
 
             <div className="bottomHeader flex items-center justify-between">
                 <Link to="/" className="logo">
-                    <img src={logo} alt="" />
+                    <img className="w-[70px] md:w-[100px] lg:w-[150px]" src={logo} alt="" />
                 </Link>
                 <div ref={linksRef} className={`links flex items-center justify gap-6 ${isMenuOpen ? 'active' : ''}`}>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/">الرئيسية</NavLink>
@@ -52,10 +52,9 @@ const Header = () => {
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/blogs">المدونات</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/commonQuestions">الأسئلة الشائعة</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/about">المزيد</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/more">المزيد</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/contact">تواصل معنا</NavLink>
                 </div>
-                <div className="left flex items-center gap-5">
+                <div className="left flex items-center gap-2 md:gap-5">
                     <Link to='/wishList'>
                         <img src={wish} alt="wish" />
                     </Link>
@@ -64,10 +63,22 @@ const Header = () => {
                     </Link>
                     <div className="flex items-center gap-2">
                         <img src={eng} alt="english" />
-                        <span>Englash</span>
+                        <span  className="hidden md:block">Englash</span>
                     </div>
-                    <FontAwesomeIcon className={`showBar ${isMenuOpen ? 'active' : ''}`} icon={faBars} onClick={toggleMenu} />
-                    <FontAwesomeIcon  className="close" icon={faTimes} onClick={toggleMenu} />
+                    {!isMenuOpen && (
+                            <FontAwesomeIcon
+                                className="showBar"
+                                icon={faBars}
+                                onClick={toggleMenu}
+                            />
+                        )}                    
+                    {isMenuOpen && (
+                            <FontAwesomeIcon
+                                className="close"
+                                icon={faTimes}
+                                onClick={toggleMenu}
+                            />
+                        )}                
                 </div>
             </div>
         </div>
