@@ -15,14 +15,14 @@ const Read = () => {
         <input
           type="text"
           placeholder="اكتب اسم القراءة"
-          className="p-2 rounded-md border-2 bg-[#EAF8F4] w-80 pr-10 focus:outline-none "
+          className="p-2 rounded-md border-2 bg-[#EAF8F4] w-36 md:w-80 pr-10 focus:outline-none "
           style={{
-            borderColor: "var(--main-dark-color)", 
+            borderColor: "var(--main-dark-color)", // تحديد لون الإطار باستخدام المتغير
           }}
         />
         <FontAwesomeIcon
           icon={faSearch}
-          className="absolute text-green-700 left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
+          className="absolute text-green-700 left-28 md:left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
         />
       </div>
 

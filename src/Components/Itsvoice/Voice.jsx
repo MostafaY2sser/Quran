@@ -15,7 +15,7 @@ const Voice = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  const audioSrc = "https://www.example.com/audio-file.mp3";
+  // const audioSrc = "https://www.example.com/audio-file.mp3";
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
@@ -35,20 +35,20 @@ const Voice = () => {
         <input
           type="text"
           placeholder="اكتب اسم القراءة"
-          className="p-2 rounded-md border-2 bg-[#EAF8F4] w-80 pr-10 focus:outline-none "
+          className="p-2 rounded-md border-2 bg-[#EAF8F4] w-36 md:w-80 pr-10 focus:outline-none "
           style={{
-            borderColor: "var(--main-dark-color)",
+            borderColor: "var(--main-dark-color)", // تحديد لون الإطار باستخدام المتغير
           }}
         />
         <FontAwesomeIcon
           icon={faSearch}
-          className="absolute text-green-700 left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
+          className="absolute text-green-700 left-28 md:left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
         />
       </div>
 
       <div
         style={{ boxShadow: "0 1px 6px -1px var(--main-green-color)" }}
-        className="audio-player shadow-md p-4 rounded-lg flex flex-col items-center my-7 relative"
+        className="audio-player shadow-md p-4 mx-1 rounded-lg flex flex-col items-center my-7 relative"
       >
         {/* العنوان */}
         <h3 className="text-lg font-semibold mb-2">سورة الكهف</h3>
@@ -105,7 +105,7 @@ const Voice = () => {
         </button>
 
         {/* مشغل الصوت */}
-        <ReactHowler src={audioSrc} playing={isPlaying} />
+        {/* <ReactHowler src={audioSrc} playing={isPlaying} /> */}
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-7">

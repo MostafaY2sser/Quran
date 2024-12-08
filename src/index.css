@@ -44,6 +44,13 @@ a{
   max-width: 1440px;
   margin: 0 auto ;
   padding: 0 20px;
+  overflow: hidden;
+}
+
+@media ( max-width : 767px ) {
+  .appContainer{
+    padding: 0 10px;
+  }
 }
 
 
@@ -76,6 +83,12 @@ a{
   height: 1px; 
   background-color: var(--main-border-color); 
 }
+
+/* @media ( max-width : 767px ) {
+  .globalMain-header{
+    font-size: 14px;
+  }
+} */
 
 /* custom-underline */
 .custom-underline {
