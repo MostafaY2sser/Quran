@@ -131,7 +131,6 @@ const PricingPage = () => {
                         borderColor: "var(--main-dark-color)",
                     }}
                 >
-<<<<<<< HEAD
                     {["30 دقيقة" , "45 دقيقة", "60 دقيقة", "الجروب"].map((tab) => (
                         <button
                             key={tab}
@@ -145,7 +144,6 @@ const PricingPage = () => {
                             {tab}
                         </button>
                     ))}
-=======
                     <div className="flex justify-center w-full ">
                         {["30 دقيقة", "45 دقيقة", "60 دقيقة", "الجروب"].map((tab,index) => (
                             <button
@@ -161,7 +159,6 @@ const PricingPage = () => {
                             </button>
                         ))}
                     </div>
->>>>>>> 645b8dcca848e29fab0716f4f0e13541853f31cf
                 </div>
 
 
