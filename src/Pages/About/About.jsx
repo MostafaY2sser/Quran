@@ -31,12 +31,20 @@ const About = () => {
   return (
     
     <div>
-      <nav className="p-6 m-10 bg-[--main-bgLight-color] h-[159px] top-[301px]">
-            <div className="flex gap-[24px] items-center justify-center h-[100px] top-[330px] left-[91] ">
-            <Link to='/login' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">تسجيل الدخول</Link>
-            <Link to='/About' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">من نحن</Link>
-            <Link to='/Joinus' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">انضم الينا كمعلم</Link>
-            <Link to='/Ratings' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">التقييمات</Link>
+      <nav className="bg-[--main-bgLight-color] mt-3">
+            <div className="flex gap-[4px] items-center justify-center p-3">
+            <Link to='/login' 
+             className='globalButton text-center text-[8px] md:text-xl w-32 md:w-64 h-12 md:h-20 flex justify-center items-center'
+            >تسجيل الدخول</Link>
+            <Link to='/About' 
+             className='globalButton text-center text-[8px] md:text-xl w-32 md:w-64 h-12 md:h-20 flex justify-center items-center'
+            >من نحن</Link>
+            <Link to='/Joinus'  
+             className='globalButton text-center text-[8px] md:text-xl w-32 md:w-64 h-12 md:h-20 flex justify-center items-center'
+            >انضم الينا كمعلم</Link>
+            <Link to='/Ratings' 
+            className='globalButton text-center text-[8px] md:text-xl w-32 md:w-64 h-12 md:h-20 flex justify-center items-center'
+            >التقييمات</Link>
             </div>
         </nav>
       <div className="about-h3 my-3">

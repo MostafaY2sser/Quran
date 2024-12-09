@@ -57,25 +57,17 @@ const Visible = () => {
         disableOnInteraction: false,}}
       navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="custom-swiper "
+        className="custom-swiper px-[5px]"
       >
-        <SwiperSlide className="cont"> 
-        
-          
-
+        <SwiperSlide className="cont px-[7px]"> 
          <img className="w-full" src={ph1} alt=""/> 
         </SwiperSlide>
-        <SwiperSlide className="cont">  
-        
-        
+        <SwiperSlide className="cont px-[7px]">  
         <img className="w-full" src={ph1} alt=""/> 
-        
        </SwiperSlide>
-        <SwiperSlide className="cont">
-      
-
+        <SwiperSlide className="cont px-[7px]">
            <img className="w-full" src={ph1} alt=""/> 
-            </SwiperSlide>
+        </SwiperSlide>
 
       </Swiper>
 

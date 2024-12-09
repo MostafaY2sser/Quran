@@ -7,15 +7,29 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import ReactHowler from "react-howler";
 
 
 const Voice = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [surahs, setSurahs] = useState([]);
+  // Api - https://quran.codecraft1.com/api/surah
+  useEffect(() => {
+    const fetchSurahs = async () => {
+      try {
+        const response = await fetch("https://quran.codecraft1.com/api/surah");
+        const data = await response.json();
+        setSurahs(data); // تخزين البيانات في state
+      } catch (error) {
+        console.error("Error fetching Surahs:", error);
+      }
+    };
 
-  // const audioSrc = "https://www.example.com/audio-file.mp3";
+    fetchSurahs();
+  }, []);
+
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
@@ -107,706 +121,48 @@ const Voice = () => {
         {/* مشغل الصوت */}
         {/* <ReactHowler src={audioSrc} playing={isPlaying} /> */}
       </div>
-
       <div className="flex flex-wrap items-center justify-center gap-7">
+        
+      <div className="flex flex-wrap items-center justify-center gap-7">
+        {surahs.map((surah) => (
+          <div
+            key={surah.id}
+            className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md"
+          >
+            {/* اسم السورة */}
+            <p>{surah.name}</p>
 
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
+            {/* زر التشغيل */}
+            <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
+              <button onClick={togglePlayPause}>
+                {isPlaying ? (
+                  <FontAwesomeIcon className="text-white" icon={faPause} />
+                ) : (
+                  <FontAwesomeIcon
+                    className="text-[--main-light-color]"
+                    icon={faPlay}
+                  />
+                )}
+              </button>
+            </div>
+
+            {/* أيقونة المفضلة */}
+            <button className="mt-2 absolute top-1 left-3">
+              <FontAwesomeIcon
+                className="text-[--main-light-color]"
+                icon={faHeart}
+              />
             </button>
           </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="w-3" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div> 
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-        <div className="flex flex-col w-[150px] relative gap-5 p-4 px-5 bg-[--secound-bg-color] items-center justify-center rounded-md">
-          <p>سورة مريم</p>
-          <div className="flex items-center justify-center rounded-full w-10 h-10 bg-[--main-dark-color]">
-            {" "}
-            {/* icon Pause */}
-            <button className="" onClick={togglePlayPause}>
-              {isPlaying ? (
-                <FontAwesomeIcon className="text-white" icon={faPause} />
-              ) : (
-                <FontAwesomeIcon
-                  className="text-[--main-light-color]"
-                  icon={faPlay}
-                />
-              )}
-            </button>
-          </div>
-
-          <button className="mt-2 absolute top-1 left-3">
-            <FontAwesomeIcon
-              className="text-[--main-light-color]"
-              icon={faHeart}
-            />
-          </button>
-        </div>
-
+        ))}
+      
+      </div>
       </div>
     </div>
   );
 };
 
 export default Voice;
+
+
+
