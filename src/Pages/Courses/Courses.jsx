@@ -16,6 +16,7 @@ import Container_2 from '../../assets/images/courses/Container_2 .png'
 import Container_3 from '../../assets/images/courses/Container_3.png'
 import Container_4 from '../../assets/images/courses/Container_4.png'
 import pepole from '../../assets/images/general/people.png'
+import sheikh from '../../assets/images/courses/sheikh.jpg'
 
 
 
@@ -46,7 +47,7 @@ const Courses = () => {
             imgSrc: Container,
             title: "مصحف حافظ كامل",
             text: "سيبدأ الطلاب بنجاح في حفظ القرآن الكريم بالكامل أو اختيار أجزاء بناء على أهدافهم الشخصية ومناهجهم الدراسية.",
-        
+
         },
         {
             id: 2,
@@ -54,7 +55,7 @@ const Courses = () => {
             imgSrc: Container_1,
             title: "إتقان التجويد في حافظ",
             text: "سيقوم كل طالب بحفظ وتلاوة القرآن بدقة والطلاقة من خلال تعلم قواعد التجويد المناسبة.",
-            
+
         },
         {
             id: 3,
@@ -62,7 +63,7 @@ const Courses = () => {
             imgSrc: Container_2,
             title: "خطط القرآن",
             text: "تطوير تقنيات مراجعة قوية للحفاظ على المدى الطويل الاحتفاظ بأجزاء القرآن.",
-            
+
         },
         {
             id: 4,
@@ -70,7 +71,7 @@ const Courses = () => {
             imgSrc: Container_3,
             title: "االتعلم الذاتي",
             text: "مع خطط الدروس المخصصة التي تتكيف مع قدراتهم و الجداول الزمنية ، سيحقق الطلاب الأهداف الخاصة بهم بأنفسهم وتيرة.",
-           
+
         },
         {
             id: 5,
@@ -78,7 +79,7 @@ const Courses = () => {
             imgSrc: Container_4,
             title: "المسائلة الشخصية",
             text: "سيكتسب الطلاب الثقة في تقدمهم مع الانتظام التقييمات والتعليقات الشخصية للحفاظ عليها المسار.",
-            
+
         },
     ];
 
@@ -134,65 +135,65 @@ const Courses = () => {
     ];
 
 
-    const dataWhy = [ 
-        {text : "أفضل طرق التدريس" , pargraph : "مصطفي ياسر حمدي"} ,
-        {text : "شهادات إتمام الدورة" , pargraph : "مصطفي ياسر حمدي"} ,
-        {text : "المسابقات والاختبارات" , pargraph : "مصطفي ياسر حمدي"} ,
-        {text : "خطط رسوم ميسورة التكلفة" , pargraph : "مصطفي ياسر حمدي"} ,
-        {text : "24/7 التوفر" , pargraph : "مصطفي ياسر حمدي"} ,
-        {text : "فصول تجريبية مجانية" , pargraph : "مصطفي ياسر حمدي"} ,
+    const dataWhy = [
+        { text: "أفضل طرق التدريس", pargraph: "مصطفي ياسر حمدي" },
+        { text: "شهادات إتمام الدورة", pargraph: "مصطفي ياسر حمدي" },
+        { text: "المسابقات والاختبارات", pargraph: "مصطفي ياسر حمدي" },
+        { text: "خطط رسوم ميسورة التكلفة", pargraph: "مصطفي ياسر حمدي" },
+        { text: "24/7 التوفر", pargraph: "مصطفي ياسر حمدي" },
+        { text: "فصول تجريبية مجانية", pargraph: "مصطفي ياسر حمدي" },
     ]
 
 
     const dataQuestion = [
-        { question : "ما الذي يميز معلمي القرآن الخاصين عن غيرهم؟" , ansswer : "مصطفي سار حمدي" },
-        { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
-        { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
-        { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
-        { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
+        { question: "ما الذي يميز معلمي القرآن الخاصين عن غيرهم؟", ansswer: "مصطفي سار حمدي" },
+        { question: "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟", ansswer: "مصطفي سار حمدي" },
+        { question: "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟", ansswer: "مصطفي سار حمدي" },
+        { question: "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟", ansswer: "مصطفي سار حمدي" },
+        { question: "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟", ansswer: "مصطفي سار حمدي" },
     ]
 
 
     const dataSlider = [
         {
-            img : pepole,
-            name : "مصطفي ياسر",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+            img: pepole,
+            name: "مصطفي ياسر",
+            ex: 4,
+            rate: 2,
+            course: "القرآن واللغة العربية والدراسات الإسلامية",
+            des: "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار"
         },
         {
-            img : pepole,
-            name : "عبد الرحمن",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+            img: pepole,
+            name: "عبد الرحمن",
+            ex: 4,
+            rate: 2,
+            course: "القرآن واللغة العربية والدراسات الإسلامية",
+            des: "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار"
         },
         {
-            img : pepole,
-            name : "احمد",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+            img: pepole,
+            name: "احمد",
+            ex: 4,
+            rate: 2,
+            course: "القرآن واللغة العربية والدراسات الإسلامية",
+            des: "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار"
         },
         {
-            img : pepole,
-            name : "عمر",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+            img: pepole,
+            name: "عمر",
+            ex: 4,
+            rate: 2,
+            course: "القرآن واللغة العربية والدراسات الإسلامية",
+            des: "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار"
         },
         {
-            img : pepole,
-            name : "جمال",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
+            img: pepole,
+            name: "جمال",
+            ex: 4,
+            rate: 2,
+            course: "القرآن واللغة العربية والدراسات الإسلامية",
+            des: "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار"
         },
     ]
 
@@ -327,17 +328,17 @@ const Courses = () => {
 
             <CoursesPage />
 
-            <div>
-                <h4 className="globalMain-header text-[30px] mb-2">
+            <div className='mb-4' >
+                <h4 className="globalMain-header sm:text-sm md:text-[30px] mb-8 text-center">
                     ما هي الميزات التي تجعل الدورة الخاصة بنا مميزة
                 </h4>
-                <div className="p-20 flex items-center">
+                <div className=" flex flex-wrap lg:flex-nowrap items-end justify-center gap-16 md:gap-[130px] ">
 
-                    <div className="w-1/2 space-y-4 p-6">
+                    <div className="space-y-4 w-full lg:w-1/2 flex flex-col justify-center">
                         {cardsData.map((card) => (
                             <div
                                 key={card.id}
-                                className={`flex items-center p-4 rounded-lg shadow`}
+                                className="flex items-center p-4 rounded-lg shadow"
                                 style={{ backgroundColor: card.bgColor }}
                             >
                                 <img
@@ -349,17 +350,18 @@ const Courses = () => {
                                     <h3 className="text-lg font-semibold text-[#157A67]">
                                         {card.title}
                                     </h3>
-                                    <p className="font-semibold">{card.text}</p>
+                                    <p className=" md:font-semibold">{card.text}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <div className="w-1/2 flex justify-center">
+
+                    <div className=" ">
                         <img
-                            src="/path-to-your-image.jpg"
+                            src={sheikh}
                             alt="Special Feature"
-                            className="w-full max-w-md rounded-lg shadow"
+                            className=" h-[300px] md:h-[450px] rounded-lg shadow object-cover"
                         />
                     </div>
                 </div>
@@ -367,8 +369,8 @@ const Courses = () => {
 
             {/* ///////////////////// */}
 
-            <div className="p-10">
-                <h4 className="globalMain-header text-[30px] mb-12 text-center">
+            <div className="p-5 md:p-10">
+                <h4 className="globalMain-header sm:text-sm md:text-[30px] mb-12 text-center">
                     ما هي الميزات التي تجعل دورتنا التعليمية مميزة
                 </h4>
                 <div className="flex flex-wrap -mx-4">
@@ -384,13 +386,13 @@ const Courses = () => {
                                 <img
                                     src={card.imgSrc}
                                     alt="Icon"
-                                    className="w-12 h-12 mx-2"
+                                    className=" w-10 md:w-12 h-10 md:h-12 mx-2"
                                 />
                                 <div>
-                                    <h3 className="text-lg font-semibold text-[#157A67]">
+                                    <h3 className="sm:text-md md:text-lg font-semibold text-[#157A67]">
                                         {card.title}
                                     </h3>
-                                    <p className="text-gray-700">{card.text}</p>
+                                    <p className="lg:text-lg">{card.text}</p>
                                 </div>
                             </div>
                         </div>
@@ -401,24 +403,22 @@ const Courses = () => {
 
 
 
-            <div className="flex flex-wrap md:flex-nowrap justify-between items-center bg-[#D6EBE1] p-16 rounded-lg shadow-lg">
+            <div className="flex flex-wrap md:flex-nowrap justify-between items-center bg-[#D6EBE1] p-6 md:p-16 rounded-lg shadow-lg">
                 {/* القسم الأيمن: النصوص والزر */}
-                <div className="flex flex-col justify-center items-center md:w-1/2 space-y-4">
+                <div className="flex flex-col justify-center items-center w-full md:w-1/2 space-y-4 text-center md:text-start">
                     <h3 className="text-xl font-bold text-[#157A67]">
                         شهادة إتمام الدورة التعليمية
                     </h3>
-                    <p className=" leading-relaxed text-center text-lg font-bold">
+                    <p className="leading-relaxed  text-lg sm:font-semibold md:font-bold">
                         عند الانتهاء من الدورة، سيحصل الطلاب على شهادة إنجاز وسيتم تكريمهم
                         باحتفال بتقدمهم في تعلم الدروس القرآنية الرئيسية. يمثل هذا الإنجاز خطوة
                         مهمة في رحلتهم لفهم وحفظ القرآن.
                     </p>
-                    <button className='globalButton '> إحجز نسخة تجريبية الآن </button>
-                       
-                    
+                    <button className="globalButton"> إحجز نسخة تجريبية الآن </button>
                 </div>
 
                 {/* القسم الأيسر: صورة الشهادة */}
-                <div className="flex justify-center items-center md:w-1/2 mt-8 md:mt-0">
+                <div className="flex justify-center items-center w-full md:w-1/2 mt-8 md:mt-0">
                     <div className="bg-white rounded-lg shadow-md p-12 w-full max-w-sm">
                         <p className="text-center text-[#157A67] font-semibold">صورة الشهادة</p>
                     </div>
@@ -430,18 +430,18 @@ const Courses = () => {
 
             <div className="whyChose mt-20">
                 <h4 className="text-[--main-green-color] text-[30px] font-[700] text-center pb-5">لماذا تختار موقع ......</h4>
-                <hr  className='border-0 h-[2px] bg-[--main-border-color] w-[20%] ml-[auto] mr-[auto] '/>
+                <hr className='border-0 h-[2px] bg-[--main-border-color] w-[20%] ml-[auto] mr-[auto] ' />
 
                 <div className="content flex  justify-around mt-10">
                     <div className="text">
-                        { dataWhy.map((item , index) => (
+                        {dataWhy.map((item, index) => (
                             <details key={index}>
                                 <summary className="w-[300px] p-2 mb-3 rounded-md text-[18px] font-[600] shadow-lg cursor-pointer bg-[--main-bgLight-color] text-[--main-green-color] border-[1px] border-[--main-border-color] border-r-[7px] border-r-[--main-border-color]">
                                     {item.text}
                                 </summary>
                                 <p className="bg-[--main-bgLight-color] rounded-md p-5  mb-3">{item.pargraph}</p>
                             </details>
-                        )) }
+                        ))}
                     </div>
                     <div className="image bg-[#333] w-[30%] h-[350px] rounded-md overflow-hidden">
                         <img className="w-full h-full" src={pepole} alt="" />
@@ -454,12 +454,12 @@ const Courses = () => {
             <div className="repeatQuestion flex items-center justify-around mt-20">
                 <h4 className="text-[32px] font-[700] text-[--main-green-color] border-b-2 border-[--main-border-color] ">أهم الأسئلة الشائعة؟</h4>
                 <div className="question rounded-md ">
-                    { dataQuestion.map((item , index) =>(
+                    {dataQuestion.map((item, index) => (
                         <details key={index}>
                             <summary className="w-[400px] p-4   text-[16px] font-[400] shadow-lg cursor-pointer bg-[--main-bgLight-color]  border-b-[1px] border-b-[--main-green-color]">{item.question}</summary>
                             <p className="bg-[--main-bgLight-color] rounded-md p-5  mb-3">{item.ansswer}</p>
                         </details>
-                    )) }
+                    ))}
                 </div>
             </div>
 

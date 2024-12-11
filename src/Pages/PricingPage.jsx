@@ -8,6 +8,7 @@ import MasterCard from "../assets/images/prices/MasterCard.png"
 import Plan from "../Components/Plan/Plan"
 import EasySteps from "../Components/EasySteps/EasySteps";
 import { useNavigate } from 'react-router-dom';
+import CurrencyConverter from "../Components/CurrencyConverter/CurrencyConverter";
 
 const PricingPage = () => {
     const navigate = useNavigate();
@@ -104,17 +105,18 @@ const PricingPage = () => {
                     إذا كنت لا تدفع بالدولار الأمريكي، فيمكنك استخدام محول العملات التالي
                     لحساب قيمة التسعير مقابل عملتك.
                 </p>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-16">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-32">
                     <img
                         src={image1}
                         alt="محول العملات"
-                        className="w-60 h-48 md:w-72 md:h-64 rounded-md"
+                        className="w-60 h-48 md:w-[350px] md:h-[300px] rounded-md"
                     />
-                    <img
+                    <CurrencyConverter/>
+                    {/* <img
                         src={image2}
                         alt="وسائل الدفع"
                         className="w-40 h-60 md:w-48 md:h-72 rounded-md"
-                    />
+                    /> */}
                 </div>
             </div>
 
@@ -125,7 +127,7 @@ const PricingPage = () => {
 
                 {/* الألسنة (Tabs) */}
                 <div
-                    className="mb-8 w-full"
+                    className="mx-auto mb-8 w-full"
                     style={{
                         borderColor: "var(--main-dark-color)",
                     }}
