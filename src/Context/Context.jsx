@@ -8,12 +8,7 @@ export const Store = createContext()
 
 // eslint-disable-next-line react/prop-types
 const  StoreProvider = ({ children }) => {
-
-
-
-
   // ___________________  Wish List  ________________________________________________________________________________________________________________________________________
-
     // get wishlist Itme from localStorage or initialize it as an empty array
     const [wishlistitem, setWishListItem] = useState(() => {
       const savedWishlist = localStorage.getItem('wishlist');
@@ -88,6 +83,34 @@ const  StoreProvider = ({ children }) => {
   }, [cartItem]);
 
 
+  //__________________   ViewBook   _________________________________________________________________________________________________________________________________________
+
+  const [ViewBookListItem, setViewBookListItem] = useState(() => {
+    const savedViewBook = localStorage.getItem('prevViewBook');
+    return savedViewBook ? JSON.parse(savedViewBook) : [];
+});
+
+const addToViewBook = (item) => {
+    setViewBookListItem((prevViewBook) => {
+        const updatedViewBook = [...prevViewBook, item];
+        localStorage.setItem('prevViewBook', JSON.stringify(updatedViewBook));
+        return updatedViewBook;
+    });
+};
+
+const removeFromViewBookListItem = (itemId) => {
+    setViewBookListItem((prevViewBook) => {
+        const updatedprevViewBook = prevViewBook.filter(item => item.id !== itemId);
+        localStorage.setItem('prevViewBook', JSON.stringify(updatedprevViewBook));
+        return updatedprevViewBook;
+    });
+};
+
+useEffect(() => {
+    localStorage.setItem('prevViewBook', JSON.stringify(ViewBookListItem));
+}, [ViewBookListItem]);
+
+
 //___________________________________________________________________________________________________________________________________________________________
 
 
@@ -100,6 +123,8 @@ const  StoreProvider = ({ children }) => {
           calculateTotalPrice,
           addToWishlist,
           removeFromWishlist,
+          addToViewBook,
+          removeFromViewBookListItem
         }}>
           {children}
         </Store.Provider>

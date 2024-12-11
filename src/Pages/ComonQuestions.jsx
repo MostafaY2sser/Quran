@@ -1,3 +1,4 @@
+
 // import React, { useState } from "react";
 // import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -85,7 +86,7 @@
 
 // export default CommonQuestions;
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

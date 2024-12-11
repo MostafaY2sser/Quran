@@ -1,4 +1,3 @@
-    import React from 'react'
     import joinus from '../assets/images/joinus/joinus.png'
     import design1 from '../assets/images/general/design1.png'
     import desigh3 from '../assets/images/general/design3.png'
@@ -148,8 +147,8 @@
                 </div>
                 <div className="relative inline-block">
                     <label className='flex'>سيرتك الذاتية:</label>
-                    <input type="file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"/>
-                    <span class="block bg-[#F4FCFC] text-[--main-dark-color] py-2 px-4 rounded text-center cursor-pointer">اختر ملف</span>
+                    <input type="file" className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"/>
+                    <span className="block bg-[#F4FCFC] text-[--main-dark-color] py-2 px-4 rounded text-center cursor-pointer">اختر ملف</span>
                 </div>
                 <div>
                 <label className="block text-right mb-1">كيف عرفتنا ؟</label>

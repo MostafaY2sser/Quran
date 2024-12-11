@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import sliderImg from "../../assets/images/home/heroImg.png";
 import border from "../../assets/images/home/border.png";
 import stekar from "../../assets/images/home/stekar.png";
-
 import "./heroHome.css";
 
 

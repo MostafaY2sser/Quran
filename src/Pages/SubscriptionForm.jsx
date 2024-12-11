@@ -8,16 +8,16 @@ const SubscriptionForm = () => {
     // const [selectedPlanName, setSelectedPlanName] = useState("");
     const [isRecurring, setIsRecurring] = useState(false);
     const [formData, setFormData] = useState({
-        course: null,
-        plan: null,
-        subscription_plan: null,
-        name: null,
-        email: null,
-        phone: null,
-        country: null,
-        payment_method: null,
-        card_name: null,
-        card_number: null,
+        course: "",
+        plan: "",
+        subscription_plan: "",
+        name: "",
+        email: "",
+        phone: "",
+        country: "",
+        payment_method: "",
+        card_name: "",
+        card_number: "",
         accept_terms: null,
 
     });
@@ -85,7 +85,7 @@ const SubscriptionForm = () => {
                 }
             );
 
-            if (response.status === 200) {
+            if (response.status === 201) {
                 console.log("Data submitted successfully");
                 console.log(response);
 
@@ -340,23 +340,43 @@ const SubscriptionForm = () => {
                 )}
                 <div className="mt-6">
                     <h3 className="text-lg font-bold text-[#157A67]">تمكين الدفع الشهري المتكرر</h3>
-                    <label className="flex items-center mt-2">
+                    {/* <label className="flex items-center mt-2">
                         <input
+ 
                             type="checkbox"
-                            name="yes"
-                            value={isRecurring ? "true" : "false"} // قم بتعيين القيمة بشكل ديناميكي
+                            name="accept_terms"
+                            value={isRecurring ? true : false}
                             className="form-checkbox ml-2"
-                            checked={isRecurring} // ربط الحالة مع isRecurring
+                            checked={isRecurring}
                             onChange={(e) => {
+                                const newValue = !isRecurring ? true : false;
                                 setIsRecurring(!isRecurring);
                                 setFormData((prev) => ({
                                     ...prev,
-                                    accept_terms: !isRecurring ? "true" : "false", // تحديث القيمة في formData
+                                    accept_terms: newValue, // تحديث القيمة بناءً على الحالة الجديدة
+                                }));
+                            }}
+                        />
+                        <span className="ml-2 text-gray-700">نعم</span>
+                    </label> */}
+                    <label className="flex items-center mt-2">
+                        <input
+                            type="checkbox"
+                            name="accept_terms"
+                            className="form-checkbox ml-2"
+                            checked={isRecurring}
+                            onChange={() => {
+                                const newValue = !isRecurring;
+                                setIsRecurring(newValue);
+                                setFormData((prev) => ({
+                                    ...prev,
+                                    accept_terms: newValue, // إرسال القيمة كـ boolean
                                 }));
                             }}
                         />
                         <span className="ml-2 text-gray-700">نعم</span>
                     </label>
+
                     <p className=" text-sm mt-4 leading-relaxed">
                         سيتم دفع الاشتراك الشهري المتكرر مقدما ويتم تجديده تلقائيا في نفس اليوم من كل شهر. في حالة الإلغاء أو الإيقاف أو تغيير الخطة ، نقوم بإلغاء الخطة أو إيقافها مؤقتا أو تغييرها وفقا لذلك مع ضمان استرداد الأموال بالكامل لأي فئات مستحقة.
                     </p>

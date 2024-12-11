@@ -31,12 +31,20 @@ const About = () => {
   return (
     
     <div>
-      <nav className="p-6 m-10 bg-[--main-bgLight-color] h-[159px] top-[301px]">
-            <div className="flex gap-[24px] items-center justify-center h-[100px] top-[330px] left-[91] ">
-            <Link to='/login' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">تسجيل الدخول</Link>
-            <Link to='/About' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">من نحن</Link>
-            <Link to='/Joinus' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">انضم الينا كمعلم</Link>
-            <Link to='/Ratings' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">التقييمات</Link>
+      <nav className="bg-[--main-bgLight-color] mt-3">
+            <div className="flex gap-[4px] items-center justify-center p-3">
+            <Link to='/login' 
+             className='globalButton text-center text-[8px] md:text-xl w-32 md:w-64 h-12 md:h-20 flex justify-center items-center'
+            >تسجيل الدخول</Link>
+            <Link to='/About' 
+             className='globalButton text-center text-[8px] md:text-xl w-32 md:w-64 h-12 md:h-20 flex justify-center items-center'
+            >من نحن</Link>
+            <Link to='/Joinus'  
+             className='globalButton text-center text-[8px] md:text-xl w-32 md:w-64 h-12 md:h-20 flex justify-center items-center'
+            >انضم الينا كمعلم</Link>
+            <Link to='/Ratings' 
+            className='globalButton text-center text-[8px] md:text-xl w-32 md:w-64 h-12 md:h-20 flex justify-center items-center'
+            >التقييمات</Link>
             </div>
         </nav>
       <div className="about-h3 my-3">
@@ -71,11 +79,11 @@ const About = () => {
 
       <div className="flex flex-col my-7">
         <div className="flex flex-row items-center gap-3 box-about">
-          <div className="w-1/4">
+          <div className="w-1/4 hidden md:block">
             <img className="p-7" src={img5} alt="img5" />
           </div>
 
-          <div className="flex flex-col gap-8 w-3/4 p-7">
+          <div className="flex flex-col gap-8 w-full md:w-3/4 p-7">
             <h4 className="custom-underline">مرخص من جامعة الأزهر</h4>
             <p className="text-justify">
               نحن فخورون بأن نقول إن جامعة الأزهر قدمت تراخيص وإشراف شديد لتعليم
@@ -87,11 +95,11 @@ const About = () => {
         </div>
         {/* green box */}
         <div className="flex flex-row items-center gap-3 box-about green-box">
-          <div className="w-1/4">
+          <div className="w-1/4 hidden md:block">
             <img className="p-7" src={img2} alt="img2" />
           </div>
 
-          <div className="flex flex-col gap-8 w-3/4 p-7">
+          <div className="flex flex-col gap-8 w-full md:w-3/4 p-7">
             <h4 className="custom-underline">انضم إلى آلاف الطلاب</h4>
             <p className="text-justify">
               انضم إلى آلاف الطلاب الذين يثقون في أكاديمية مشكاة للحصول على أعلى
@@ -101,11 +109,11 @@ const About = () => {
         </div>
 
         <div className="flex flex-row items-center gap-3 box-about">
-          <div className="w-1/4">
+          <div className="w-1/4 hidden md:block">
             <img className="p-7" src={img8} alt="img8" />
           </div>
 
-          <div className="flex flex-col w-3/4 p-7">
+          <div className="flex flex-col w-full md:w-3/4 p-7">
             <h4 className="custom-underline">مهمتنا</h4>
             <p className="mt-8 text-justify">
               قد جعلنا مهمتنا توفير التعليم لأولئك الذين كانوا محتاجين وحريصين
@@ -129,11 +137,11 @@ const About = () => {
 
         {/* green box */}
         <div className="flex flex-row items-center gap-3 box-about green-box">
-          <div className="w-1/4">
+          <div className="w-1/4 hidden md:block">
             <img className="p-7" src={img3} alt="img3" />
           </div>
 
-          <div className="flex flex-col gap-8 w-3/4 p-7">
+          <div className="flex flex-col gap-8 w-full md:w-3/4 p-7">
             <h4 className="custom-underline">رؤيتنا</h4>
             <p className="text-justify">
               تتمثل رؤيتنا في نشر تعلم القرآن من خلال مدرسين متخصصين وجعله في
@@ -146,11 +154,11 @@ const About = () => {
         </div>
 
         <div className="flex flex-row items-center gap-3 box-about">
-          <div className="w-1/4">
+          <div className="w-1/4 hidden md:block">
             <img className="p-7" src={img4} alt="img4" />
           </div>
 
-          <div className="flex flex-col w-3/4 p-7">
+          <div className="flex flex-col w-full md:w-3/4 p-7">
             <h4 className="custom-underline">النهج الأقصى</h4>
             <p className="mt-8 text-justify">
               إعلان رسالة الإسلام لمعظم الناس ، سواء كانوا يعيشون في بلد مسلم أو
@@ -162,11 +170,11 @@ const About = () => {
 
         {/* green box */}
         <div className="flex flex-row items-center gap-3 box-about green-box">
-          <div className="w-1/4">
+          <div className="w-1/4 hidden md:block">
             <img className="p-7" src={img6} alt="img6" />
           </div>
 
-          <div className="flex flex-col gap-8 w-3/4 p-7">
+          <div className="flex flex-col gap-8 w-full md:w-3/4 p-7">
             <h4 className="custom-underline">جودة التعليم</h4>
             <p className="text-justify">
               التعليم الجيد حق لكل إنسان. لذلك ، تتمثل رؤيتنا في توفير تعليم جيد
@@ -176,11 +184,11 @@ const About = () => {
         </div>
 
         <div className="flex flex-row items-center gap-3 box-about">
-          <div className="w-1/4">
+          <div className="w-1/4 hidden md:block">
             <img className="p-7" src={img7} alt="img7" />
           </div>
 
-          <div className="flex flex-col w-3/4 p-7">
+          <div className="flex flex-col w-full md:w-3/4 p-7">
             <h4 className="custom-underline">مدرسونا</h4>
             <p className="mt-8 text-justify">
               نقوم بتعيين مدرسينا على وجه التحديد وفقا لمجال خبرتهم بغض النظر عن
