@@ -84,6 +84,12 @@ a{
   background-color: var(--main-border-color); 
 }
 
+/* @media ( max-width : 767px ) {
+  .globalMain-header{
+    font-size: 14px;
+  }
+} */
+
 /* custom-underline */
 .custom-underline {
   display: inline-block;

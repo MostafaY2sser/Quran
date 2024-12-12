@@ -14,19 +14,26 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className="py-10">
+    <footer className="py-5">
       <div className="footer p-5" style={{ backgroundColor: "#7CB98E" }}>
-        <div className="footerComponent flex items-center">
+
+        <div className="flex flex-col md:flex-row items-center gap-2">
+
+          <div className="">
           <img
-            className="logo ml-10 w-16 xs:w-48 sm:w-32"
+            className="w-[100px]"
             src={logo}
             alt="logo"
           />
-          <h3 className="text-justify">
+          </div>
+
+          <h3 className="text-center text-[16px] md:text-[18px]">
             هو موقع لتعلم القراءات العشرة والحصول على شهادات وإجازات معتمدة من
             معلمين خبراء فى العلوم القرآنية
           </h3>
+
         </div>
+
       </div>
 
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 text-start md:text-right">
@@ -149,6 +156,11 @@ const Footer = () => {
             <img src={yout} alt="yout" />
           </a>
         </div>
+      </div>
+      <div className="flex items-center gap-2 w-full mt-4">
+        <p className="m-auto font-medium text-[12px] md:text-[16px]">
+        حقوق الطبع والنشر <span>&copy; 2024 Codec Craft</span> جميع الحقوق محفوظة
+        </p>
       </div>
     </footer>
   );

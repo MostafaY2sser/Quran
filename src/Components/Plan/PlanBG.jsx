@@ -29,7 +29,7 @@ const Plan = () => {
           <span className='ml-2 p-1 w-7 h-7 border-2   border-black rounded-full flex items-center justify-center'>
                     <FontAwesomeIcon className='text-sm' icon={faCheck} style={{color: "#000000",}} />
                       </span>
-          <p className='font-[700] text-[20px]'>
+          <p className='font-[700] text-[70px]'>
                     جودة عالية ورسوم منخفضة
                     </p>
           </div>
@@ -42,6 +42,10 @@ const Plan = () => {
           خصم يصل الى 20%
                     </p>
           </div>
+
+
+
+
 
           <div className='flex items-center justify-center'>
             <span className='ml-2 p-1 w-7 h-7 border-2 border-black rounded-full flex items-center justify-center'>

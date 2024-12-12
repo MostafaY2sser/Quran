@@ -6,29 +6,26 @@ import {
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ph1 from '../../../src/assets/images/general/FoundEgaza.png'
+import './visible.css'
 
-
-const Visible = () => {
- 
-
-  
+const Visible = () => {  
   return (
     <div>
-      <div
+     <div
         className="flex items-center justify-end w-full my-8 relative"
         style={{ direction: "rtl" }}
       >
         <input
           type="text"
           placeholder="اكتب اسم القراءة"
-          className="p-2 rounded-md border-2 bg-[#EAF8F4] w-80 pr-10 focus:outline-none "
+          className="p-2 rounded-md border-2 bg-[#EAF8F4] w-36 md:w-80 pr-10 focus:outline-none "
           style={{
-            borderColor: "var(--main-dark-color)",
+            borderColor: "var(--main-dark-color)", // تحديد لون الإطار باستخدام المتغير
           }}
         />
         <FontAwesomeIcon
           icon={faSearch}
-          className="absolute text-green-700 left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
+          className="absolute text-green-700 left-28 md:left-72 top-1/2 transform -translate-y-1/2 scale-x-[-1]"
         />
       </div>
 
@@ -48,8 +45,8 @@ const Visible = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center font-bold bg-[--secound-bg-color] p-10">
-        <h2 className="my-5 text-[--main-dark-color]">فيديوهات مقترحة</h2>
+      <div className="flex flex-col items-center justify-center font-bold bg-[--secound-bg-color] py-2">
+        <h2 className="my-5 text-[26px] text-[--main-dark-color]">فيديوهات مقترحة</h2>
 
         <div className="flex items-center justify-center">
 
@@ -57,30 +54,23 @@ const Visible = () => {
       slidesPerView={"auto"} loop
       autoplay={{
         delay: 2500,
-        disableOnInteraction: false,
-      }}
+        disableOnInteraction: false,}}
       navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
+        className="custom-swiper px-[5px]"
       >
-        <SwiperSlide className="cont"> 
-        
-          
-
+        <SwiperSlide className="cont px-[7px]"> 
          <img className="w-full" src={ph1} alt=""/> 
         </SwiperSlide>
-        <SwiperSlide className="cont">  
-        
-        
+        <SwiperSlide className="cont px-[7px]">  
         <img className="w-full" src={ph1} alt=""/> 
-        
        </SwiperSlide>
-        <SwiperSlide className="cont">
-      
-
+        <SwiperSlide className="cont px-[7px]">
            <img className="w-full" src={ph1} alt=""/> 
-            </SwiperSlide>
+        </SwiperSlide>
 
       </Swiper>
+
         </div>
       </div>
 

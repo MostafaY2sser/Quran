@@ -1,6 +1,3 @@
-
-
-
 import { useState, useRef } from "react";
 import facebook from "../../assets/images/iconHeader/facebook.png";
 import whatsap from "../../assets/images/iconHeader/whatsap.png";
@@ -50,7 +47,7 @@ const Header = () => {
                 </Link>
                 <div ref={linksRef} className={`links flex items-center justify gap-6 ${isMenuOpen ? 'active' : ''}`}>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/">الرئيسية</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/egazatpage">الإجازات</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/egazat">الإجازات</NavLink>
                     <NavLink className={({ isActive }) => `dropdown ${isActive ? "link active" : "link"}`} to="/coursesPage"
                     >
                         الكورسات 
@@ -131,13 +128,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
-
-
-
-
-

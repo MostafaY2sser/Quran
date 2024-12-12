@@ -25,13 +25,14 @@ import AlShehk from './Pages/AlShehk/AlShehk';
 import SubscriptionForm from './Pages/SubscriptionForm';
 import CommonQuestions from './Pages/ComonQuestions';
 import Read from './Components/read/read';
-import Books from './Components/books/books';
+import Books from './Components/books/Books';
 import Visible from './Components/Visible/Visible';
 import Voice from './Components/Itsvoice/voice';
 import ProfileTecher from './Pages/ProfileTecher/ProfileTecher';
 import Ratings from './Pages/Ratings/Ratings';
 import CoursesPage from './Pages/CoursesPage/CoursesPage';
 import whatsapp from './assets/images/iconHeader/whatsap.png'
+import ViewBook from './Components/ViewBook/ViewBook';
 
 // animate css 
 import 'animate.css';
@@ -51,6 +52,7 @@ function App() {
 
       <div className="appContainer">
         <Router>
+          {/* <Header /> */}
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
@@ -63,13 +65,14 @@ function App() {
             <Route path='/about'  element={<About/>}/>
             <Route path='/easySteps'  element={<EasySteps/>}/>
             <Route path='/plan' element={<Plan />} />
-            <Route path='/egazatpage' element={<EgazatPage />} />
+            <Route path='/egazat' element={<EgazatPage />} />
             <Route path='/itsLibrary' element={<ItsLibrary />} />
             <Route path='/read' element={<Read />} /> 
             <Route path='/books' element={<Books />} />
+            <Route path='/viewBook' element={<ViewBook />} />
             <Route path='/visible' element={<Visible />} />
             <Route path='/Voice' element={<Voice />} />
-            <Route path="/egazatpage/:card/:narration" element={<EgazatDetailsPage />} />
+            <Route path="/egazat/:id" element={<EgazatDetailsPage />} />
             <Route path="/pricingpage" element={<PricingPage />} />
             <Route path="/subsriptionform" element={<SubscriptionForm/>} />
             <Route path="/commonQuestions" element={<CommonQuestions/>} />
@@ -78,6 +81,8 @@ function App() {
             <Route path="/coursesPage" element={<CoursesPage/>} />
             <Route path="/coursesdetails/:name" element={<Courses/>} />
             <Route path="/blogsdetails/:id" element={<BlogsDetails/>} />
+            <Route path='/login'  element={<Login/>}/>
+            <Route path="/qurancourse" element={<Courses/>} />
             <Route path='/login'  element={<Login/>}/>
             <Route path='/Regester' element={<Regester/>}/>
             <Route path= '/newpass' element={<Newpass/>}/>
