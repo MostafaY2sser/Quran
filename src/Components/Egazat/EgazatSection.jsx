@@ -1,7 +1,13 @@
 
 
+import { useNavigate } from "react-router-dom"
 import FoundEgaza from "../../assets/images/general/FoundEgaza.png"
 const EgazatSection = () => {
+
+
+    const navigate = useNavigate()
+
+
     return (
         <>
             <div className="flex flex-wrap md:flex-nowrap items-center justify-between p-8 my-5 rounded-lg w-full"
@@ -18,6 +24,7 @@ const EgazatSection = () => {
                         style={{
                             backgroundColor: "var(--main-bgLight-color)",
                         }}
+                        onClick={()=> navigate('/trialSession')}
                     >
                         حجز حصة تدريبية
                     </button>

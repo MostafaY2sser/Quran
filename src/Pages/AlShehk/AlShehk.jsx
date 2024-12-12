@@ -8,7 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Rating } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
+import axios from 'axios';
 
 
 
@@ -18,53 +19,31 @@ const AlShehk = () => {
      // State For Search input
     const [searchText, setSearchText] = useState('');
 
+    // Teacher List 
+    const [teachers, setTeachers] = useState([]);
 
     // navigate to Profile Teacher Page
     const navigate = useNavigate()
 
+//     // Fetch data from API
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('https://quran.codecraft1.com/api/infoelshikhs');
+                setTeachers(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+    }, []);
 
-    const data = [
-        {
-            img : pepole,
-            name : "مصطفي ياسر",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
-        },
-        {
-            img : pepole,
-            name : "عبد الرحمن",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
-        },
-        {
-            img : pepole,
-            name : "احمد",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
-        },
-        {
-            img : pepole,
-            name : "عمر",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
-        },
-        {
-            img : pepole,
-            name : "جمال",
-            ex : 4 ,
-            rate : 2 ,
-            course : "القرآن واللغة العربية والدراسات الإسلامية",
-            des : "مدرسون ذوو خبرة في القرآن واللغة العربية والدراسات الإسلامية ، معظمهم من   خريجو الأزهر مع الإجازات ، متخصصون في التجويد والقرآن استذكار" 
-        },
-    ]
+//     // Filter data based on search input
+    const filteredData = teachers.filter((teacher) =>
+        teacher.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+
+
 
 
     const dataWhy = [ 
@@ -84,12 +63,6 @@ const AlShehk = () => {
         { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
         { question : "هل سيستوعب معلمو القرآن الطلاب من جميع الأعمار والمواقع؟" , ansswer : "مصطفي سار حمدي" },
     ]
-
-
-    // Function To Search Teacher
-    const filteredData = data.filter((teacher) =>
-        teacher.name.toLowerCase().includes(searchText.toLowerCase())
-    );
 
 
 
@@ -148,30 +121,36 @@ const AlShehk = () => {
             </div>
 
 
-            <div className="teachers flex flex-col items-center gap-5 md:gap-10 relative">
-                <h4 className="text-[24px] md:text-[30px] text-[--main-dark-color] font-[500]">اختر مدرس القرآن المصري عبر الإنترنت</h4>
-                <div className="teachersBox ">
-                    {filteredData.map((item , index) => (
-                        <div className="box bg-[--main-bgLight-color] flex items-center flex-col md:flex-row  p-10 rounded-lg mb-10 shadow-lg relative" key={index}>
-                            <img className="w-[120px] h-[120px] rounded-[50%] mx-5 object-cover border-4 border-[--main-dark-color]" src={item.img} alt="" />
+
+            <div className="teachersBox ">
+                    {filteredData.map((teacher, index) => (
+                        <div className="box bg-[--main-bgLight-color] flex items-center flex-col md:flex-row p-10 rounded-lg mb-10 shadow-lg relative" key={index}>
+                            {/* Teacher Image */}
+                            <img
+                                className="w-[120px] h-[120px] rounded-[50%] mx-5 object-cover border-4 border-[--main-dark-color]"
+                                src={`https://quran.codecraft1.com/public/${teacher.image}`}
+                                alt={teacher.name}
+                            />
+                            {/* Teacher Info */}
                             <div className="info flex-1 flex flex-col items-center md:items-start gap-2">
-                                <h6 className="text-[26px] font-[500]">الشيخ / {item.name}</h6>
-                                <p className="text-[20px] text-[#62B6B7]">{item.ex} سنين من الخبرة</p>
-                                <Rating name="read-only" value={item.rate} readOnly />
-                                <p className="my-4 text-[20px]" >{item.course}</p>
-                                <p className="text-[18px] w-[90%] md:w-[50%] text-center md:text-start">{item.des}</p>
+                                <h6 className="text-[26px] font-[500]">الشيخ / {teacher.name}</h6>
+                                <p className="text-[20px] text-[#62B6B7]">{teacher.experience_years}</p>
+                                <Rating name="read-only" value={teacher.rating} readOnly />
+                                <p className="my-4 text-[20px]">{teacher.specialization}</p>
+                                <p className="text-[18px] w-[90%] md:w-[50%] text-center md:text-start">
+                                    {teacher.description}
+                                </p>
                             </div>
-                            <button 
+                            <button
                                 className='globalButton rounded-md flex-2 mt-5 md:mt-0'
-                                onClick={() => navigate(`/ProfileTeacher/${item.name}`, { state: item })}    
+                                onClick={() => navigate(`/ProfileTeacher/${teacher.id}`, { state: teacher })}
                             >
-                                    عرض ملف المعلم</button>
+                                عرض ملف المعلم
+                            </button>
                             <img className="absolute top-4 left-5 cursor-pointer" src={disLike} alt="" />
                         </div>
                     ))}
                 </div>
-                {/* <img className="absolute right-[-100px] top-[-100px] "  src={design3} alt="" /> */}
-            </div>
 
 
             <div className="whyChose">
@@ -214,3 +193,20 @@ const AlShehk = () => {
 }
 
 export default AlShehk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

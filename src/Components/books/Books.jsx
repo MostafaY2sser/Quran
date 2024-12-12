@@ -3,6 +3,8 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import img from "../../assets/images/general/SVG (1).png";
 
+
+
 const Books = () => {
   const [books, setBooks] = useState([]);
 

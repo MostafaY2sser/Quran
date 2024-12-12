@@ -1,11 +1,10 @@
-import { useParams, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import design1 from "../assets/images/general/design1.png"
 import design2 from "../assets/images/general/design2.png"
 
 export default function EgazatDetailsPage() {
-  const { card, narration } = useParams();
   const location = useLocation();
-  const { image, description } = location.state || {};
+  const { cardread, description, buttonName} = location.state || {};
 
   return (
     <>
@@ -15,12 +14,14 @@ export default function EgazatDetailsPage() {
 
         <div className="flex justify-center items-center">
           <h1 className="text-2xl font-bold text-green-700 mb-4">
-            {card} : {narration}
+            {cardread} : {buttonName}
           </h1>
         </div>
+        
 
-          <div className=" p-8 mt-11 flex flex-col items-start p-4 h-screen ">
-            {image && (
+
+          <div className=" p-8 mt-11 flex flex-col items-start  h-screen ">
+            {/* {image && (
               <img
                 src={image}
                 alt={narration}
@@ -29,7 +30,7 @@ export default function EgazatDetailsPage() {
                   borderColor: 'var(--main-dark-color)', 
                 }}
               />
-            )}
+            )} */}
             {description && (
               <p className="text-gray-700 text-center text-lg">{description}</p>
             )}
