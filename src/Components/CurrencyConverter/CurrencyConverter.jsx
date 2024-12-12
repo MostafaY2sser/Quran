@@ -5,7 +5,7 @@ const CurrencyConverter = () => {
     const [amount, setAmount] = useState("");
     const [fromCurrency, setFromCurrency] = useState("USD");
     const [toCurrency, setToCurrency] = useState("EGP");
-    const [result, setResult] = useState(null); // لتخزين النتيجة
+    const [result, setResult] = useState(null); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -13,13 +13,12 @@ const CurrencyConverter = () => {
 
 
         try {
-            // إرسال البيانات باستخدام Axios
+            
             const response = await axios.get(
                 `https://quran.codecraft1.com/api/currency-exchange?currency_from=${fromCurrency}&currency_to=${toCurrency}&amount=${amount}`
             );
 
-            // تعيين النتيجة المستلمة من الخادم
-            setResult(response.data.data); // تأكد من تنسيق الاستجابة من الـ API
+            setResult(response.data.data); 
             console.log("Response:", response.data.data);
         } catch (error) {
             console.error("Error:", error);

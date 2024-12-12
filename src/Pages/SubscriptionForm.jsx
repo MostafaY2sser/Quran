@@ -5,7 +5,6 @@ import PayPal from "../assets/images/general/PayPal.png";
 const SubscriptionForm = () => {
     const [plans, setPlans] = useState([]);
     const [selectedCheckbox, setSelectedCheckbox] = useState(null);
-    // const [selectedPlanName, setSelectedPlanName] = useState("");
     const [isRecurring, setIsRecurring] = useState(false);
     const [formData, setFormData] = useState({
         course: "",
@@ -16,8 +15,6 @@ const SubscriptionForm = () => {
         phone: "",
         country: "",
         payment_method: "",
-        card_name: "",
-        card_number: "",
         accept_terms: null,
 
     });
@@ -28,6 +25,59 @@ const SubscriptionForm = () => {
         { country: "الإمارات", code: "+971" },
         { country: "الأردن", code: "+962" },
         { country: "الكويت", code: "+965" },
+        { country: "البحرين", code: "+973" },
+        { country: "قطر", code: "+974" },
+        { country: "عمان", code: "+968" },
+        { country: "اليمن", code: "+967" },
+        { country: "العراق", code: "+964" },
+        { country: "سوريا", code: "+963" },
+        { country: "لبنان", code: "+961" },
+        { country: "فلسطين", code: "+970" },
+        { country: "ليبيا", code: "+218" },
+        { country: "تونس", code: "+216" },
+        { country: "الجزائر", code: "+213" },
+        { country: "المغرب", code: "+212" },
+    ];
+    const courses = [
+        "دورة تحفيظ القرآن الكريم",
+        "دورات تفسير القرآن الكريم",
+        "دورات إجازة القرآن الكريم",
+        "دورات القراءات العشر",
+        "دورات القرآن الكريم للأطفال",
+        "دورات تجويد القرآن الكريم",
+        "دورات تلاوة القرآن الكريم",
+        "دورات اللغة العربية للكبار",
+        "دورات اللغة العربية للأطفال",
+        "دورة القاعدة النورانية",
+        "دورة المحادثة باللغة العربية",
+        "دورات اللغة العربية لقراءة القرآن",
+        "دورات الحديث",
+        "دورات الفقه",
+        "دورات العقيدة",
+        "دورات المسلمين الجدد",
+        "دورات تعليم الشهادة للمسلمين الجدد"
+    ];
+
+    const arabCountries = [
+        { name: "مصر", value: "Egypt" },
+        { name: "السعودية", value: "KSA" },
+        { name: "الإمارات", value: "UAE" },
+        { name: "الأردن", value: "Jordan" },
+        { name: "الكويت", value: "Kuwait" },
+        { name: "البحرين", value: "Bahrain" },
+        { name: "عمان", value: "Oman" },
+        { name: "قطر", value: "Qatar" },
+        { name: "العراق", value: "Iraq" },
+        { name: "لبنان", value: "Lebanon" },
+        { name: "سوريا", value: "Syria" },
+        { name: "اليمن", value: "Yemen" },
+        { name: "الأردن", value: "Jordan" },
+        { name: "فلسطين", value: "Palestine" },
+        { name: "السودان", value: "Sudan" },
+        { name: "ليبيا", value: "Libya" },
+        { name: "تونس", value: "Tunisia" },
+        { name: "الجزائر", value: "Algeria" },
+        { name: "المغرب", value: "Morocco" },
     ];
 
     useEffect(() => {
@@ -58,7 +108,6 @@ const SubscriptionForm = () => {
     };
 
     const handleRadioChange = (planName) => {
-        // setSelectedPlanName(planName);
         setFormData((prev) => ({ ...prev, subscription_plan: planName }));
     };
 
@@ -134,9 +183,11 @@ const SubscriptionForm = () => {
                         value={formData.course}
                         onChange={handleInputChange}
                     >
-                        <option value="default">اختر الحزمة</option>
-                        <option value="basic">الحزمة الأساسية</option>
-                        <option value="premium">الحزمة المميزة</option>
+                        {courses.map((course, index) => (
+                            <option key={index} value={course}>
+                                {course}
+                            </option>
+                        ))}
                     </select>
                 </div>
 
@@ -201,7 +252,6 @@ const SubscriptionForm = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         className="w-full px-4 py-2 border-2 border-[#0F8A73]"
-                        required
                     />
 
                 </div>
@@ -216,7 +266,6 @@ const SubscriptionForm = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         className="w-full px-4 py-2 border-2 border-[#0F8A73]"
-                        required
                     />
                 </div>
                 {/* //////////////// */}
@@ -232,9 +281,9 @@ const SubscriptionForm = () => {
                         onChange={handleInputChange}
                         placeholder="أدخل رقم الواتساب"
                         className="px-4 py-1 focus:outline-none w-[90%] border-2 border-[#0F8A73]"
-                        required
+                      
                     />
-                    {/* <select
+                    <select
                         name="countryCode"
                         className="block py-[7px] focus:outline-none border-2 border-[#0F8A73]"
                         value={formData.countrycode}
@@ -247,7 +296,7 @@ const SubscriptionForm = () => {
                                 {item.country} ({item.code})
                             </option>
                         ))}
-                    </select> */}
+                    </select>
                 </div>
 
                 <div>
@@ -259,15 +308,13 @@ const SubscriptionForm = () => {
                         className="block w-full px-4 py-2 border-2 focus:outline-none border-[#0F8A73]"
                         value={formData.country}
                         onChange={handleInputChange}
-                        required
 
                     >
-                        <option value="">اختر البلد</option>
-                        <option value="Egypt">مصر</option>
-                        <option value="KSA">السعودية</option>
-                        <option value="UAE">الإمارات</option>
-                        <option value="Jordan">الأردن</option>
-                        <option value="Kuwait">الكويت</option>
+                        {arabCountries.map((country, index) => (
+                            <option key={index} value={country.value}>
+                                {country.name}
+                            </option>
+                        ))}
                     </select>
                 </div>
 
@@ -300,65 +347,9 @@ const SubscriptionForm = () => {
                         <span className="ml-2 text-gray-700">الدفع عبر PayPal</span>
                     </label>
                 </div>
-                {formData.payment_method === "card" && (
-                    <div className="mt-4 space-y-4">
-                        <div>
-                            <label className="block text-sm font-bold mb-2">
-                                رقم البطاقة:
-                            </label>
-                            <input
-                                type="text"
-                                name="card_number"
-                                value={formData.card_number}
-                                onChange={handleInputChange}
-                                className="w-full px-3 py-2 focus:outline-none border-2 border-[#0F8A73]"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-sm font-bold mb-2">
-                                الاسم على البطاقة:
-                            </label>
-                            <input
-                                type="text"
-                                name="card_name"
-                                value={formData.card_name}
-                                onChange={handleInputChange}
-                                className="w-full px-3 py-2 focus:outline-none border-2 border-[#0F8A73]"
 
-                            />
-                        </div>
-                    </div>
-                )}
-                {formData.payment_method === "paypal" && (
-                    <div className="mt-4">
-                        <img
-                            src={PayPal}
-                            alt="PayPal Logo"
-                            className="w-20 h-8 cursor-pointer"
-                        />
-                    </div>
-                )}
                 <div className="mt-6">
                     <h3 className="text-lg font-bold text-[#157A67]">تمكين الدفع الشهري المتكرر</h3>
-                    {/* <label className="flex items-center mt-2">
-                        <input
- 
-                            type="checkbox"
-                            name="accept_terms"
-                            value={isRecurring ? true : false}
-                            className="form-checkbox ml-2"
-                            checked={isRecurring}
-                            onChange={(e) => {
-                                const newValue = !isRecurring ? true : false;
-                                setIsRecurring(!isRecurring);
-                                setFormData((prev) => ({
-                                    ...prev,
-                                    accept_terms: newValue, // تحديث القيمة بناءً على الحالة الجديدة
-                                }));
-                            }}
-                        />
-                        <span className="ml-2 text-gray-700">نعم</span>
-                    </label> */}
                     <label className="flex items-center mt-2">
                         <input
                             type="checkbox"
@@ -382,10 +373,7 @@ const SubscriptionForm = () => {
                     </p>
                 </div>
 
-                <div className="mt-6 text-right flex flex-col ">
-                    <span className="text-[#157A67]">المجموع</span>
-                    <span className="text-sm">$0.00</span>
-                </div>
+
 
                 <div className="flex justify-center gap-[15px] md:gap-[55px] sm:mt-10 md:mt-12">
                     <button
