@@ -2,8 +2,11 @@
 import './coursesSection.css'
 import cousesImg from '../../assets/images/home/cousesImg.png'
 import iconImg from '../../assets/images/home/iconImg.png'
+import { useNavigate } from 'react-router-dom'
 
 const CoursesSection = () => {
+
+    const navigate = useNavigate()
 
 
     const data = [
@@ -43,7 +46,10 @@ const CoursesSection = () => {
                             </div>
                             <p className="font-[700] text-[30px] text-[white]">{item.text}</p>
                         </div>
-                        <button className="globalButton rounded-[15px] bg-[#CBEDD5] text-[black] text-[24px] font-[700]">حجز حصة تجريبية</button>
+                        <button
+                            className="globalButton rounded-[15px] bg-[#CBEDD5] text-[black] text-[24px] font-[700]"
+                            onClick={()=> navigate('/trialSession')}
+                        >حجز حصة تجريبية</button>
                     </div>
                 ))}
             </div>

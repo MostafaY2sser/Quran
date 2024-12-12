@@ -1,3 +1,4 @@
+    import React from 'react'
     import joinus from '../assets/images/joinus/joinus.png'
     import design1 from '../assets/images/general/design1.png'
     import desigh3 from '../assets/images/general/design3.png'
@@ -8,17 +9,17 @@
 
     export default function Joinus() {
         return (
-            <div className='container w-full justify-center relative '>
+            <div className='container w-full justify-center relative font-sans '>
             <nav className="p-6 m-10 bg-[--main-bgLight-color]  h-[159px] top-[301px]">
-            <div className="flex gap-[24px] items-center justify-center   h-[100px] top-[330px] left-[91]  ">
-            <Link to='/login' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">تسجيل الدخول</Link>
-            <Link to='/About' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">من نحن</Link>
-            <Link to='/Joinus' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">انضم الينا كمعلم</Link>
-            <Link to='/' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white active:bg-[--main-dark-color] active:text-white active:ring-[--main-border-color] justify-center items-center flex ">التقييمات</Link>
+            <div className="flex gap-[24px] items-center justify-center h-[100px] top-[330px] left-[91]  ">
+            <Link to='/login' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white focus:bg-[--main-dark-color] active:text-white focus:ring-2  focus:ring-[--main-border-color] justify-center items-center flex ">تسجيل الدخول</Link>
+            <Link to='/About' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white focus:bg-[--main-dark-color] active:text-white  focus:ring-2 focus:ring-[--main-border-color] justify-center items-center flex ">من نحن</Link>
+            <Link to='/Joinus' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white focus:bg-[--main-dark-color] active:text-white focus:ring-2  focus:ring-[--main-border-color] justify-center items-center flex ">انضم الينا كمعلم</Link>
+            <Link to='/Ratings' className="p-[12px 22px 12px 22px] rounded-[15px] w-[309px] h-[100px] bg-white focus:bg-[--main-dark-color] active:text-white focus:ring-2  focus:ring-[--main-border-color] justify-center items-center flex ">التقييمات</Link>
             </div>
         </nav>
                 <div className="images flex justify-between w-full">
-            <div className='rightimg mr-[100px] mb-10 '>
+            <div className='rightimg mr-[100px] mb-10 '> 
                 <img src={joinus } alt="" />
                 <h2 className='join font-bold text-center text-[--main-green-color] border-b-2 border-b-[--main-border-color]'>انضم الينا</h2>
             </div>
@@ -147,8 +148,8 @@
                 </div>
                 <div className="relative inline-block">
                     <label className='flex'>سيرتك الذاتية:</label>
-                    <input type="file" className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"/>
-                    <span className="block bg-[#F4FCFC] text-[--main-dark-color] py-2 px-4 rounded text-center cursor-pointer">اختر ملف</span>
+                    <input type="file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"/>
+                    <span class="block bg-[#F4FCFC] text-[--main-dark-color] py-2 px-4 rounded text-center cursor-pointer">اختر ملف</span>
                 </div>
                 <div>
                 <label className="block text-right mb-1">كيف عرفتنا ؟</label>

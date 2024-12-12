@@ -7,12 +7,15 @@ import whatsap from "../../assets/images/iconHeader/whatsap.png";
 import youtube from "../../assets/images/iconHeader/youtube.png";
 import logo from "../../assets/images/iconHeader/logo.png";
 import eng from "../../assets/images/iconHeader/eng.png";
-import wish from "../../assets/images/iconHeader/wish.png";
-import cart from "../../assets/images/iconHeader/cart.png";
+// import wish from "../../assets/images/iconHeader/wish.png";
+// import cart from "../../assets/images/iconHeader/cart.png";
 import './header.css';
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars , faTimes  } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faUser , faShoppingCart , faHeart  } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -37,7 +40,7 @@ const Header = () => {
                     <img src={whatsap} alt="whatsap" />
                 </div>
                 <Link to="/TrialSession">
-                    <button className="globalButton px-[10px] py-[8px]">حجز حصة تجريبية</button>
+                    <button className="globalButton px-[5px] md:px-[10px] py-[5px] md:py-[8px] text-[14px] rounded-[5px]">حجز حصة تجريبية</button>
                 </Link>
             </div>
 
@@ -48,7 +51,43 @@ const Header = () => {
                 <div ref={linksRef} className={`links flex items-center justify gap-6 ${isMenuOpen ? 'active' : ''}`}>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/">الرئيسية</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/egazatpage">الإجازات</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/coursesPage">الكورسات</NavLink>
+                    <NavLink className={({ isActive }) => `dropdown ${isActive ? "link active" : "link"}`} to="/coursesPage"
+                    >
+                        الكورسات 
+                        <FontAwesomeIcon className="dropdownIcon" icon={faChevronDown} />
+                        <div className="dropDwonList">
+                            <h4 className="dropDwonQuran relative">دروس القرآن الكريم <FontAwesomeIcon className="dropDwonQuranIcon" icon={faChevronDown} />
+                                <ul className="absolute top-0 right-[101%] w-[200px] ">
+                                    <li>تحفيظ القرآن الكريم</li>
+                                    <li>تفسير القرآن الكريم</li>
+                                    <li>إجازة القرآن الكريم</li>
+                                    <li>القراءات العشر</li>
+                                    <li>تحفيظ القرآن الكريم</li>
+                                    <li>تلاوة القرآن الكريم</li>
+                                    <li>تجويد القرآن الكريم</li>
+                                    <li>القرآن الكريم للأطفال</li>
+                                </ul>
+                            </h4>
+                            <h4 className="dropDwonLang relative">دروس اللغة العربية <FontAwesomeIcon className="dropDwonLangIcon" icon={faChevronDown} />
+                                <ul className="absolute top-0 right-[101%] w-[200px] ">
+                                    <li>كورس اللغة العربية للكبار</li>
+                                    <li>كورس اللغة العربية للأطفال</li>
+                                    <li>كورس القاعدة النورانية</li>
+                                    <li>كورس المحادثة باللغة العربية</li>
+                                    <li>كورس اللغة العربية لقراءة القرآن</li>
+                                </ul>
+                            </h4>
+                            <h4 className="dropDwonLesson relative">دروس إسلامية <FontAwesomeIcon  className="dropDwonLessonIcon" icon={faChevronDown} />
+                                <ul className="absolute top-0 right-[101%] w-[200px]">
+                                    <li>كورس الحديث</li>
+                                    <li>كورس الفقة</li>
+                                    <li>كورس العقيدة</li>
+                                    <li>كورس المسلمين الجدد</li>
+                                    <li>كورس تعليم الشهادة للمسلمين الجدد</li>
+                                </ul>
+                            </h4>
+                        </div>
+                    </NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/pricingpage">الأسعار</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/ItsLibrary">المكتبة</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/elsheikhs">الشيوخ</NavLink>
@@ -59,10 +98,13 @@ const Header = () => {
                 </div>
                 <div className="left flex items-center gap-2 md:gap-5">
                     <Link to='/wishList'>
-                        <img src={wish} alt="wish" />
+                        <FontAwesomeIcon className="text-[#0F8A73] text-[20px]" icon={faHeart} />                    
                     </Link>
                     <Link to="/shoppingCart">
-                        <img src={cart} alt="shopping-cart" />
+                        <FontAwesomeIcon className="text-[#0F8A73] text-[20px]" icon={faShoppingCart} />                    
+                    </Link>
+                    <Link>
+                        <FontAwesomeIcon className="text-[#0F8A73] text-[20px]" icon={faUser} />
                     </Link>
                     <div className="flex items-center gap-2">
                         <img src={eng} alt="english" />

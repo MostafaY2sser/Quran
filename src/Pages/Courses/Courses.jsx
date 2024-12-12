@@ -1,5 +1,5 @@
 
-import courseImg from '../../assets/images/general/course.png'
+// import courseImg from '../../assets/images/general/course.png'
 import one from '../../assets/images/courses/one.png'
 import two from '../../assets/images/courses/two.png'
 import three from '../../assets/images/courses/three.png'
@@ -17,11 +17,15 @@ import Container_3 from '../../assets/images/courses/Container_3.png'
 import Container_4 from '../../assets/images/courses/Container_4.png'
 import pepole from '../../assets/images/general/people.png'
 import { Rating } from '@mui/material'
+import { useLocation } from 'react-router-dom';
 
 
 
 
 const Courses = () => {
+
+    const location = useLocation();
+    const course = location.state;
 
 
 
@@ -234,44 +238,41 @@ const Courses = () => {
         <div className='my-10 '>
 
 
-
+{/* ------------------------------------------------------------------------------------------------------------------------------------ */}
             <div className="hero flex justify-around relative">
 
                 <div className="text pr-10 md:pr-0 ">
-                    <p className="text-[20px] font-[700] text-center md:text-start">يقدم موقع (....) دورة حفظ عبر الإنترنت لجميع الأعمار الذين يرغبون في القيام بذلك
-                        <br />
-                        حفظ القرآن كليا أو جزئيا. يضمن مدرسو الحفظ المصريون المعتمدون لدينا
-                        يتعلم كل طالب القرآن بشكل مستقل .
-                        <br />
-                        فصولنا الشخصية الفردية ، توقيت مرن ، حسب الطلب
-                        <br />
-                        المناهج الدراسية وأفضل طرق الحفظ تساعد الطلاب على إكمال
-                        <br />
-                        برنامج الحفظ بسلاسة.
-                    </p>
+                    <p className="text-[20px] font-[700] text-center md:text-start pl-3 md:pl-20">{course.description}</p>
                     <div className="number flex items-center gap-5 mt-10">
                         <div className="flex flex-col items-center">
                             <span className="text-[18px] font-[600]">الدورات المنظمة</span>
-                            <span className="text-[20px] font-[700] text-[--main-green-color]">0+</span>
+                            <span className="text-[20px] font-[700] text-[--main-green-color]">{`+${course.organized_courses}`}</span>
                         </div>
                         <div className="flex flex-col items-center">
                             <span className="text-[18px] font-[600]">المدرسين</span>
-                            <span className="text-[20px] font-[700] text-[--main-green-color]">0+</span>
+                            <span className="text-[20px] font-[700] text-[--main-green-color]">{`+${course.teachers}`}</span>
                         </div>
                         <div className="flex flex-col items-center">
                             <span className="text-[18px] font-[600]">الطلاب الراضيين</span>
-                            <span className="text-[20px] font-[700] text-[--main-green-color]">0+</span>
+                            <span className="text-[20px] font-[700] text-[--main-green-color]">{`+${course.satisfied_students}`}</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="image w-[30%]">
-                    <img className="w-full h-[300px] hidden md:block" src={courseImg} alt="" />
+                <div className="image w-[50%] hidden lg:block">
+                    <img className="w-[100%] rounded-lg " 
+                        src={`https://quran.codecraft1.com/public/${course.image}`} 
+                    />
                 </div>
 
-                <button className='globalButton absolute bottom-[-30px] md:bottom-0  left-[37%] md left-[50%]'>ابدأ تجربة مجانية</button>
+                <button className='globalButton absolute bottom-[-30px] md:bottom-0  left-[37%] md:left-[50%]'>ابدأ تجربة مجانية</button>
 
             </div>
+{/* ------------------------------------------------------------------------------------------------------------------------------------ */}
+
+
+
+
 
 
 

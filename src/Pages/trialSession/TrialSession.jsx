@@ -3,7 +3,12 @@ import design2 from "../../assets/images/general/design1.png";
 import EasySteps from "../../Components/EasySteps/EasySteps";
 import Plan from "../../Components/Plan/Plan";
 import "./trialSession.css";
+
+
 const TrialSession = () => {
+
+
+
   return (
     <div className="TrialSessionComponent">
       <div className="mb-7">
@@ -165,3 +170,10 @@ const TrialSession = () => {
   );
 };
 export default TrialSession;
+
+
+
+
+
+
+
